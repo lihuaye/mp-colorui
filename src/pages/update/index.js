@@ -1,4 +1,5 @@
-import Taro, { useState, useEffect } from "@tarojs/taro";
+import React, { useState, useEffect } from "react";
+import Taro from "@tarojs/taro";
 import { ClCard, ClLayout, ClTimeline, ClLoading } from "../../index";
 
 export default function Update() {
@@ -61,6 +62,3 @@ export default function Update() {
   );
 }
 
-Update.config = {
-  navigationBarTitleText: "更新日志"
-};

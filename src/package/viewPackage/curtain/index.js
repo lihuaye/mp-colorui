@@ -1,4 +1,5 @@
-import Taro, { useState } from "@tarojs/taro";
+import React, { useState } from "react";
+import Taro from "@tarojs/taro"
 import { Image, View } from "@tarojs/components";
 import { ClButton, ClTitleBar, ClCard, ClFlex, ClCurtain } from "../../../index";
 
@@ -117,6 +118,3 @@ export default function Curtain() {
   );
 }
 
-Curtain.config = {
-  navigationBarTitleText: "Curtain 幕帘"
-};

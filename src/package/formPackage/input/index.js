@@ -1,4 +1,5 @@
-import Taro, { useState } from "@tarojs/taro";
+import React, { useState } from "react";
+import Taro from "@tarojs/taro"
 import { ClCard, ClInput, ClLayout, ClTitleBar } from "../../../index";
 
 export default function Input() {
@@ -181,6 +182,3 @@ export default function Input() {
   );
 }
 
-Input.config = {
-  navigationBarTitleText: "Input 输入框"
-};

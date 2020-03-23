@@ -1,15 +1,14 @@
+import React from "react";
 import { Text, View } from "@tarojs/components";
-import Taro, { Component } from "@tarojs/taro";
-import { classNames } from "../../lib";
-import { TEXT_COLOR_LIST } from "../../lib/model";
+import Taro from "@tarojs/taro";
+import { classNames } from "@/lib";
+import { TEXT_COLOR_LIST } from "@/lib/model";
 import { IProps } from "../../../@types/steps";
 
 interface IState {}
 
-export default class ClStep extends Component<IProps, IState> {
-  static options = {
-    addGlobalClass: true
-  };
+export default class ClStep extends React.Component<IProps, IState> {
+
   static defaultProps: IProps = {
     steps: [],
     type: "line",
@@ -20,7 +19,7 @@ export default class ClStep extends Component<IProps, IState> {
   };
   state: IState = {};
 
-  render(): any {
+  render() {
     const stepTypeClassName = this.props.type === "arrow" ? "steps-arrow" : "";
     const activeColorClassName = this.props.activeColor
       ? TEXT_COLOR_LIST[this.props.activeColor]

@@ -1,9 +1,11 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 import { IProps } from "../../../@types/animation";
 
-export default function ClAnimation(props: IProps) {
+const ClAnimation: FunctionComponent<IProps> = (props) => {
   const type = props.type;
   const reverse = props.reverse ? "animation-reverse" : "";
   return (
@@ -23,14 +25,10 @@ export default function ClAnimation(props: IProps) {
         props.onAnimationEnd && props.onAnimationEnd(e);
       }}
     >
-      {this.props.children}
+      {props.children}
     </View>
   );
 }
-
-ClAnimation.options = {
-  addGlobalClass: true
-};
 
 ClAnimation.defaultProps = {
   type: "fade",
@@ -38,3 +36,5 @@ ClAnimation.defaultProps = {
   delay: 0,
   duration: 0.5
 } as IProps;
+
+export default ClAnimation

@@ -1,11 +1,13 @@
+// @ts-ignore
+import React, { FunctionComponent, useEffect, useState } from "react";
 import { Radio, RadioGroup, Text, View } from "@tarojs/components";
-import Taro, { useEffect, useState } from "@tarojs/taro";
+import Taro from "@tarojs/taro";
 import H5Radio from "./h5";
 import ListRadio from "./components/ListRadio";
 import { IProps } from "../../../@types/radio";
 import { classNames, isWeApp } from "../../lib";
 
-export default function ClRadio(props: IProps) {
+const ClRadio: FunctionComponent<IProps> = (props: IProps) => {
   const type = props.type || "normal";
   const shapeClassName = () => props.shape || "normal";
   const title = props.title || "";
@@ -94,6 +96,4 @@ ClRadio.defaultProps = {
   radioGroup: []
 } as IProps;
 
-ClRadio.options = {
-  addGlobalClass: true
-};
+export default ClRadio

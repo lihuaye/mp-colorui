@@ -1,4 +1,4 @@
-import Taro, { useState } from "@tarojs/taro";
+import React, { useState } from "react";
 import { ClCard, ClLayout, ClRadio, ClTitleBar } from "../../../index";
 
 const radioGroup = [
@@ -129,6 +129,3 @@ export default function Radio() {
   );
 }
 
-Radio.config = {
-  navigationBarTitleText: "Radio 单选按钮"
-};

@@ -1,4 +1,5 @@
-import Taro from "@tarojs/taro";
+import React from "react";
+import Taro from "@tarojs/taro"
 import { ClCard, ClLayout, ClShopBar, ClTitleBar } from "../../../index";
 
 const tabs = [
@@ -73,10 +74,7 @@ const openTypes = [
   }
 ]
 
-export default class ShopBar extends Taro.Component {
-  config = {
-    navigationBarTitleText: "ShopBar 购物栏"
-  };
+export default class ShopBar extends React.Component {
 
   clickIcon(index) {
     Taro.showToast({

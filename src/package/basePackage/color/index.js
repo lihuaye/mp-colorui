@@ -1,4 +1,4 @@
-import Taro from "@tarojs/taro";
+import React from "react";
 import { Block, View } from "@tarojs/components";
 import {
   ClAnimation,
@@ -12,7 +12,7 @@ import { convertLightColor } from "../../../utils";
 
 import colors from "../../../constant/color";
 
-export default class Color extends Taro.Component {
+export default class Color extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -87,6 +87,3 @@ export default class Color extends Taro.Component {
   }
 }
 
-Color.config = {
-  navigationBarTitleText: "Color 颜色"
-};

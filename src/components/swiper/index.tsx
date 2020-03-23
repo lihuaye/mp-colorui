@@ -1,11 +1,13 @@
+// @ts-ignore
+import React, { FunctionComponent, useState, useEffect } from "react";
 import { Image, Swiper, SwiperItem, Video, View } from "@tarojs/components";
-import Taro, { useState, useEffect, pxTransform } from "@tarojs/taro";
+import Taro, { pxTransform } from "@tarojs/taro";
 import { IProps, TList } from "../../../@types/swiper";
 import { classNames, generateId, isAliPay, screenPercent } from "../../lib";
 
 import "./index.scss";
 
-export default function ClSwiper(props: IProps) {
+const ClSwiper: FunctionComponent<IProps> = (props) => {
   const [listState, setListState] = useState(props.list || []);
   useEffect(() => {
     const list = props.list || [];
@@ -135,9 +137,6 @@ export default function ClSwiper(props: IProps) {
   return props.type === "card" ? cardComponent : screenComponent;
 }
 
-ClSwiper.options = {
-  addGlobalClass: true
-};
 
 ClSwiper.defaultProps = {
   autoplay: false,
@@ -145,11 +144,15 @@ ClSwiper.defaultProps = {
   list: [],
   dot: "square",
   duration: 500,
-  onClick: () => {},
+  onClick: () => {
+  },
   indicatorDots: false,
   indicatorColor: "#000",
   indicatorActiveColor: "#FFF",
   interval: 5000,
   circular: false,
-  onChange: () => {}
-} as IProps;
+  onChange: () => {
+  }
+};
+
+export default ClSwiper

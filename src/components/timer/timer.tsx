@@ -1,4 +1,5 @@
-import Taro, { Component } from '@tarojs/taro'
+import React from "react";
+import Taro  from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 
 import './timer.scss'
@@ -17,10 +18,7 @@ interface IState {
   remainSec: number
 }
 
-export default class Timer extends Component<IProps, IState> {
-  static options = {
-    addGlobalClass: true
-  }
+export default class Timer extends React.Component<IProps, IState> {
 
   tick (diffTime: number) {
     if (diffTime < 1000) {

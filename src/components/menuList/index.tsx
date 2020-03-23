@@ -1,11 +1,13 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import { Image, Text, View } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import ClIcon from "../icon/index";
-import { TEXT_COLOR_LIST } from "../../lib/model";
+import { TEXT_COLOR_LIST } from "@/lib/model";
 import { IProps } from "../../../@types/menuList";
-import { classNames } from "../../lib";
+import { classNames } from "@/lib";
 
-export default function ClMenuList(props: IProps) {
+const ClMenuList: FunctionComponent<IProps> = (props) => {
   const shortLineClassName = props.shortBorder ? "sm-border" : "";
   const cardClassName = props.card ? "card-menu" : "";
   const list = props.list || [];
@@ -72,6 +74,4 @@ ClMenuList.defaultProps = {
   list: []
 } as IProps;
 
-ClMenuList.options = {
-  addGlobalClass: true
-};
+export default ClMenuList

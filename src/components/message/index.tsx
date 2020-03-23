@@ -1,4 +1,6 @@
-import Taro, { useState, useEffect } from "@tarojs/taro";
+// @ts-ignore
+import React, { FunctionComponent, useState, useEffect } from "react";
+import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 
 import { IProps } from "../../../@types/message";
@@ -8,12 +10,13 @@ import ClText from "../text";
 import ClIcon from "../icon";
 
 import "./index.scss";
-import { classNames } from "../../lib";
+import { classNames, generateId } from "../../lib";
 
 let timer;
-export default function ClMessage(props: IProps) {
+const ClMessage: FunctionComponent<IProps> = (props) => {
   let tempHeight = 500;
   const { bgColor, type, onClose, message, show, duration } = props;
+  const [contentId] = useState(generateId());
   const [showMessage, setShowMessage] = useState(show);
   const [contentHeight, setContentHeight] = useState(tempHeight);
   const [tempMessage, setTempMessage] = useState("");
@@ -27,8 +30,9 @@ export default function ClMessage(props: IProps) {
     custom: bgColor
   };
   const calculateHeight = () => {
-    const view = Taro.createSelectorQuery().in(this.$scope);
-    const query = view.select("#content");
+    // this.$scope 暂时无法使用
+    const view = Taro.createSelectorQuery();
+    const query = view.select(`#${contentId}`);
     return new Promise(resolve => {
       query.boundingClientRect().exec(res => {
         const data = res[0];
@@ -49,7 +53,7 @@ export default function ClMessage(props: IProps) {
     });
   };
   useEffect(() => {
-    (function() {
+    (function () {
       if (!showMessage) {
         new Promise(resolve => {
           resolve(calculateHeight());
@@ -111,7 +115,7 @@ export default function ClMessage(props: IProps) {
         props.style
       )}
     >
-      <View className="cu-cl-message__content" id="content">
+      <View className="cu-cl-message__content" id={contentId}>
         <ClCard bgColor={mapColor[tempType] || "light-grey"} shadow={false}>
           <ClFlex justify="between" align="center">
             <ClText text={tempMessage} />
@@ -129,15 +133,14 @@ export default function ClMessage(props: IProps) {
   );
 }
 
-ClMessage.options = {
-  addGlobalClass: true
-};
-
 ClMessage.defaultProps = {
   bgColor: "light-grey",
   type: "info",
-  onClose: () => {},
+  onClose: () => {
+  },
   message: "",
   show: false,
   duration: 3
 } as IProps;
+
+export default ClMessage

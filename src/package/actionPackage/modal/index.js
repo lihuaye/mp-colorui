@@ -1,4 +1,5 @@
-import Taro, { useState } from "@tarojs/taro";
+import React, { useState } from "react";
+import Taro from "@tarojs/taro"
 import { View } from "@tarojs/components";
 import {
   ClButton,
@@ -140,6 +141,3 @@ export default function Modal() {
   );
 }
 
-Modal.config = {
-  navigationBarTitleText: "Modal 模态框"
-};

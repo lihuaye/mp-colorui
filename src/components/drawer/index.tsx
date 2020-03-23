@@ -1,9 +1,11 @@
+// @ts-ignore
+import React, { FunctionComponent, useMemo, useState } from "react";
 import { View } from "@tarojs/components";
-import Taro, { useMemo, useState } from "@tarojs/taro";
-import { classNames } from "../../lib";
+import Taro from "@tarojs/taro";
+import { classNames } from "@/lib";
 import { IProps } from "../../../@types/drawer";
 
-export default function ClDrawer(props: IProps) {
+const ClDrawer: FunctionComponent<IProps> = (props) => {
   const [showModal, setShowModal] = useState(props.show);
 
   useMemo(() => {
@@ -34,7 +36,7 @@ export default function ClDrawer(props: IProps) {
         }}
         style={{ height: "100vh" }}
       >
-        {this.props.children}
+        {props.children}
       </View>
     </View>
   );
@@ -57,7 +59,7 @@ export default function ClDrawer(props: IProps) {
         }}
         style={{ height: "100vh" }}
       >
-        {this.props.children}
+        {props.children}
       </View>
     </View>
   );
@@ -80,17 +82,15 @@ export default function ClDrawer(props: IProps) {
           e.stopPropagation();
         }}
       >
-        {this.props.children}
+        {props.children}
       </View>
     </View>
   );
   return props.direction === "left"
     ? leftComponent
     : props.direction === "right"
-    ? rightComponent
-    : bottomComponent;
+      ? rightComponent
+      : bottomComponent;
 }
 
-ClDrawer.options = {
-  addGlobalClass: true
-};
+export default ClDrawer

@@ -1,17 +1,15 @@
+import React from "react";
 import { Text, View } from "@tarojs/components";
-import Taro, { Component, pxTransform } from "@tarojs/taro";
-import { classNames } from "../../lib";
-import { BG_COLOR_LIST } from "../../lib/model";
+import Taro, { pxTransform } from "@tarojs/taro";
+import { classNames } from "@/lib";
+import { BG_COLOR_LIST } from "@/lib/model";
 import { IProps } from "../../../@types/titleBar";
 
 interface IState {}
 
-export default class ClTitleBar extends Component<IProps, IState> {
-  static options = {
-    addGlobalClass: true
-  };
+export default class ClTitleBar extends React.Component<IProps, IState> {
 
-  static defaultProps: IProps = {
+  static defaultProps = {
     bgColor: "white",
     textColor: "green",
     type: "border-title",

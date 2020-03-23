@@ -1,4 +1,4 @@
-import Taro from "@tarojs/taro";
+import React from "react";
 import { ClCard, ClLayout, ClSwitch, ClTitleBar } from "../../../index";
 
 export default function Switch() {
@@ -45,6 +45,3 @@ export default function Switch() {
   );
 }
 
-Switch.config = {
-  navigationBarTitleText: "Switch 开关"
-};

@@ -1,23 +1,25 @@
+import React, { useState } from "react";
 import { View } from "@tarojs/components";
-import Taro, { Component, useState } from "@tarojs/taro";
-import { classNames } from "../../../lib";
+import Taro from "@tarojs/taro";
+import { classNames } from "@/lib";
 import { IProps } from "../../../../@types/switch";
 
-export default class ClSwitch_h5 extends Component<IProps, {}> {
-  static options = {
-    addGlobalClass: true
-  };
+export default class ClSwitch_h5 extends React.Component<IProps, {}> {
+
   static defaultProps: IProps = {
     title: "",
     color: "green",
     shape: "normal",
     type: "normal",
     checked: false,
-    onChange: () => {}
+    onChange: () => {
+    }
   };
+
   onChange(flag) {
     this.props.onChange && this.props.onChange(flag);
   }
+
   render() {
     const title = this.props.title;
     const color = this.props.color || "green";

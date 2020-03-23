@@ -1,18 +1,19 @@
+import React from "react";
 import Taro, { pxTransform } from "@tarojs/taro";
 import { View, Swiper, SwiperItem } from "@tarojs/components";
-import { IProps } from "../../../../@types/calendar";
+import { IProps } from "../../../@types/calendar";
 import dayjs from "dayjs";
-import ClGrid from "../../grid";
-import ClText from "../../text";
-import ClFlex from "../../flex";
-import ClLayout from "../../layout";
-import ClCard from "../../card";
-import { classNames } from "../../../lib";
-import { BG_COLOR_LIST, TEXT_COLOR_LIST } from "../../../lib/model";
-import ClButton from "../../button";
-import ClTip from "../../tip";
+import ClGrid from "../grid";
+import ClText from "../text";
+import ClFlex from "../flex";
+import ClLayout from "../layout";
+import ClCard from "../card";
+import { classNames } from "@/lib";
+import { BG_COLOR_LIST, TEXT_COLOR_LIST } from "@/lib/model";
+import ClButton from "../button";
+import ClTip from "../tip";
 
-import "../index.scss";
+import "./index.scss";
 
 interface IState {
   thisWeek: any[];
@@ -44,10 +45,8 @@ function dealYearMonth(day) {
   return `${day.year()}年${day.month() + 1}月`;
 }
 
-export default class Calendar_h5 extends Taro.Component<IProps, IState> {
-  static options = {
-    addGlobalClass: true
-  };
+export default class Calendar_h5 extends React.Component<IProps, IState> {
+
   constructor(props) {
     super(props);
     const today = dayjs().format(FORMAT_DATE);
@@ -451,9 +450,7 @@ export default class Calendar_h5 extends Taro.Component<IProps, IState> {
     this.initCalendar();
   }
   componentDidUpdate(
-    prevProps: Readonly<IProps>,
-    prevState: Readonly<IState>,
-    snapshot?: any
+    prevProps
   ): void {
     if (prevProps.calendarType !== this.props.calendarType) {
       this.initCalendar();
@@ -518,7 +515,7 @@ export default class Calendar_h5 extends Taro.Component<IProps, IState> {
     const oldTextClassName = TEXT_COLOR_LIST["gray"];
 
     const weeksComponent = preWeek.length
-      ? [preWeek, thisWeek, nextWeek].map((week, index) => (
+      ? [preWeek, thisWeek, nextWeek].map((week) => (
           <SwiperItem key={week[3].date}>
             <ClGrid col={7}>
               {week.map(item => (
@@ -611,7 +608,7 @@ export default class Calendar_h5 extends Taro.Component<IProps, IState> {
     const monthsComponent = [preMonth, thisMonth, nextMonth].every(
       item => item.length > 0
     )
-      ? [preMonth, thisMonth, nextMonth].map((month, index) => (
+      ? [preMonth, thisMonth, nextMonth].map((month) => (
           <SwiperItem key={month[3].date}>
             <ClGrid col={7}>
               {month.map(item => (
@@ -701,7 +698,7 @@ export default class Calendar_h5 extends Taro.Component<IProps, IState> {
         ))
       : "";
 
-    const months = Array.from(Array(12)).map((item, index) => `${index + 1}月`);
+    const months = Array.from(Array(12)).map((_, index) => `${index + 1}月`);
 
     return (
       <ClCard type={showType}>

@@ -1,4 +1,4 @@
-import Taro, { useState } from "@tarojs/taro";
+import React, { useState } from "react";
 import { ClButton, ClCard, ClLayout, ClStep, ClTitleBar } from "../../../index";
 
 const steps = [
@@ -139,6 +139,3 @@ export default function Steps() {
   );
 }
 
-Steps.config = {
-  navigationBarTitleText: "Steps 步骤条"
-};

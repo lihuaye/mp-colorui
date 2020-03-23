@@ -1,11 +1,13 @@
-import Taro, { useEffect, useState } from "@tarojs/taro";
+// @ts-ignore
+import React, { FunctionComponent, useEffect, useState } from "react";
+import Taro from "@tarojs/taro";
 import { Text, View } from "@tarojs/components";
 
 import { IProps } from "../../../@types/radio";
 import ListRadio from "./components/ListRadio";
-import { classNames } from "../../lib";
+import { classNames } from "@/lib";
 
-export default function RadioH5(props: IProps) {
+const RadioH5: FunctionComponent<IProps> = (props) => {
   const type = props.type || "normal";
   const shapeClassName = props.shape || "normal";
   const title = props.title || "";
@@ -14,7 +16,7 @@ export default function RadioH5(props: IProps) {
   const list = props.radioGroup || [];
   const [activeValue, setActiveValue] = useState(props.checkedValue);
 
-  const clickRadio = (name, index) => {
+  const clickRadio = (name, _) => {
     setActiveValue(name);
   };
 
@@ -91,6 +93,4 @@ RadioH5.defaultProps = {
   radioGroup: []
 } as IProps;
 
-RadioH5.options = {
-  addGlobalClass: true
-};
+export default RadioH5

@@ -1,4 +1,4 @@
-import Taro, { useState } from "@tarojs/taro";
+import React, { useState } from "react";
 import {
   ClLayout,
   ClTitleBar,
@@ -148,7 +148,3 @@ export default function Tip() {
     </ClLayout>
   );
 }
-
-Tip.config = {
-  navigationBarTitleText: "Tip 提示"
-};

@@ -1,10 +1,12 @@
+// @ts-ignore
+import React, { FunctionComponent, useEffect, useState } from "react";
 import { Text, View, Image } from "@tarojs/components";
-import Taro, { pxTransform, useEffect, useState } from "@tarojs/taro";
-import { isNumber, generateId, classNames } from "../../lib";
-import { BG_COLOR_LIST } from "../../lib/model";
+import Taro, { pxTransform } from "@tarojs/taro";
+import { isNumber, generateId, classNames } from "@/lib";
+import { BG_COLOR_LIST } from "@/lib/model";
 import { IProps, THeaderArray } from "../../../@types/avatar";
 
-function ClAvatar(props: IProps) {
+const ClAvatar: FunctionComponent<IProps> = (props) => {
   const [headList, setHeadList] = useState(props.headerArray);
   useEffect(() => {
     const list = props.headerArray || [];
@@ -101,9 +103,6 @@ function ClAvatar(props: IProps) {
   );
 }
 
-ClAvatar.options = {
-  addGlobalClass: true
-};
 
 ClAvatar.defaultProps = {
   size: "normal",

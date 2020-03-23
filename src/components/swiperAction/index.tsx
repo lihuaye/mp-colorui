@@ -1,21 +1,25 @@
-import Taro, { useState, useEffect, pxTransform, useMemo } from "@tarojs/taro";
+// @ts-ignore
+import React, { FunctionComponent, useState, useEffect } from "react";
+import Taro, { pxTransform } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { IProps } from "../../../@types/swiperAction";
 
 import "./index.scss";
-import { BG_COLOR_LIST } from "../../lib/model";
+import { BG_COLOR_LIST } from "@/lib/model";
 import { classNames, generateId, isH5, screenPercent } from "../../lib";
 import ClLayout from "../layout";
 
-export default function ClSwiperAction(props: IProps) {
+const ClSwiperAction: FunctionComponent<IProps> = (props) => {
   const [initOptions, setInitOptions] = useState(props.options || []);
-  const [contentId, setContentId] = useState(generateId());
+  const [contentId] = useState(generateId());
   const [actionWidth, setActionWidth] = useState();
   const [lastPoint, setLastPoint] = useState(0);
   const [translateX, setTranslateX] = useState(0);
   const [lastTranslateX, setLastTranslateX] = useState(0);
+  // @ts-ignore
   const [showAnimation, setShowAnimation] = useState(0);
   const [beforeMove, setBeforeMove] = useState(0);
+  // @ts-ignore
   const [show, setShow] = useState(false);
   const [init, setInit] = useState(false);
   useEffect(() => {
@@ -33,22 +37,17 @@ export default function ClSwiperAction(props: IProps) {
         setActionWidth(width);
       }
     } else {
-      const query = Taro.createSelectorQuery().in(this.$scope);
-      this.componentDidMount = () => {
-        setTimeout(() => {
-          const view = query.select("#contentId");
-          try {
-            view.boundingClientRect().exec((rect: any) => {
-              const res = rect[0];
-              const width: number = res.width;
-              setActionWidth(width);
-              setInit(true);
-            });
-          } catch (e) {
-            throw e;
-          }
-        }, 500);
-      };
+      // this.$scope 暂时无法使用
+      const query = Taro.createSelectorQuery();
+      const view = query.select(`#${contentId}`);
+      view.boundingClientRect().exec((rect: any) => {
+        const res = rect[0];
+        if (res) {
+          const width: number = res.width;
+          setActionWidth(width);
+          setInit(true);
+        }
+      });
     }
   }, [props.options]);
   const actionsComponent = initOptions.map((item: any, index: number) => (
@@ -113,8 +112,8 @@ export default function ClSwiperAction(props: IProps) {
           distance =
             Math.abs(lastTranslateX) === actionWidth
               ? distance < 0
-                ? 0
-                : distance
+              ? 0
+              : distance
               : lastTranslateX === 0
               ? distance > 0
                 ? 0
@@ -125,8 +124,8 @@ export default function ClSwiperAction(props: IProps) {
           distance =
             Math.abs(lastTranslateX) === actionWidth
               ? distance > 0
-                ? 0
-                : distance
+              ? 0
+              : distance
               : lastTranslateX === 0
               ? distance < 0
                 ? 0
@@ -163,7 +162,7 @@ export default function ClSwiperAction(props: IProps) {
           position: "relative"
         }}
       >
-        {this.props.children}
+        {props.children}
         {isH5 ? (
           <View
             className="cl-swiper-action__action"
@@ -187,7 +186,7 @@ export default function ClSwiperAction(props: IProps) {
         ) : (
           <View
             className="cl-swiper-action__action"
-            id="contentId"
+            id={contentId}
             style={{
               right: `${
                 props.direction === "right"
@@ -210,17 +209,18 @@ export default function ClSwiperAction(props: IProps) {
   );
 }
 
-ClSwiperAction.options = {
-  addGlobalClass: true
-};
-
 ClSwiperAction.defaultProps = {
   show: false,
   disabled: false,
   autoClose: false,
   options: [],
   direction: "right",
-  onClick: () => {},
-  onClose: () => {},
-  onOpened: () => {}
+  onClick: () => {
+  },
+  onClose: () => {
+  },
+  onOpened: () => {
+  }
 } as IProps;
+
+export default ClSwiperAction

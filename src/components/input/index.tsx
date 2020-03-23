@@ -1,5 +1,7 @@
+// @ts-ignore
+import React, { FunctionComponent, useEffect, useState, useMemo, CSSProperties } from "react";
 import { Image, Input, View, ScrollView } from "@tarojs/components";
-import Taro, { useState, pxTransform, useEffect, useMemo } from "@tarojs/taro";
+import Taro, { pxTransform } from "@tarojs/taro";
 import ClButton from "../button";
 import ClIcon from "../icon/index";
 import { IProps } from "../../../@types/input";
@@ -9,12 +11,12 @@ import { classNames, screenPercent } from "../../lib";
 import ClSearchResult from "../searchBar/searchResult/index";
 import ClCard from "../card";
 
-function ClInput(props: IProps) {
+const ClInput: FunctionComponent<IProps> = (props) => {
   const [focus, setFocus] = useState(false);
   const [normalType, setNormalType] = useState();
   const [tempInput, setTempInput] = useState("");
   const [initValue, setInitValue] = useState(props.value);
-  const [inputId, setInputId] = useState(`cl-input-${+new Date()}`);
+  const [inputId] = useState(`cl-input-${+new Date()}`);
   const [materialWidth, setMaterialWidth] = useState("0px");
   const [defaultValue, setDefaultValue] = useState(props.defaultValue);
   const [showComplete, setShowComplete] = useState(false);
@@ -142,15 +144,15 @@ function ClInput(props: IProps) {
         display: showComplete ? "" : "none"
       }}
     >
-      <ClCard shadow={false} bgColor={this.props.bgColor} type="full">
+      <ClCard shadow={false} type="full">
         <ScrollView scrollY style={{ maxHeight: "300px" }}>
           <ClSearchResult
             showLoading={props.completeLoading}
             result={
               props.completes
                 ? props.completes.map(str => ({
-                    title: str
-                  }))
+                  title: str
+                }))
                 : []
             }
             onTouchResult={index => {
@@ -158,7 +160,7 @@ function ClInput(props: IProps) {
                 setInitValue(props.completes[index]);
                 setTempInput(props.completes[index]);
                 props.onTouchResult &&
-                  props.onTouchResult(props.completes[index], index);
+                props.onTouchResult(props.completes[index], index);
               }
               setShowComplete(false);
             }}
@@ -184,8 +186,8 @@ function ClInput(props: IProps) {
     props.titleWidth === "auto"
       ? {}
       : {
-          width: pxTransform(props.titleWidth || 200)
-        };
+        width: pxTransform(props.titleWidth || 200)
+      };
   useMemo(() => {
     setInitValue(value);
   }, [props.value]);
@@ -196,12 +198,15 @@ function ClInput(props: IProps) {
         const width = content.clientWidth;
         setMaterialWidth(pxTransform(width / screenPercent));
       } else {
-        const query = Taro.createSelectorQuery().in(this.$scope);
-        const view = query.select("#cl-input");
-        view.boundingClientRect().exec(res => {
-          const data = res[0];
-          setMaterialWidth(pxTransform(data.width / screenPercent));
-        });
+        // this.$scope 暂时无法使用
+        const query = Taro.createSelectorQuery();
+        const view = query.select(`#${inputId}`);
+        setTimeout(() => {
+          view.boundingClientRect().exec(res => {
+            const data = res[0];
+            setMaterialWidth(pxTransform(data.width / screenPercent));
+          });
+        }, 100)
       }
     }
   }, [props.title]);
@@ -209,7 +214,7 @@ function ClInput(props: IProps) {
     <View
       className={`${focus || initValue ? "materialFocus" : "materialBlur"}`}
       style={titleWidth}
-      id="cl-input"
+      id={inputId}
     >
       {title}
     </View>
@@ -272,7 +277,7 @@ function ClInput(props: IProps) {
                 : 0
             }`,
             paddingRight: props.clear ? pxTransform(60) : ""
-          }}
+          } as CSSProperties}
         />
         <View
           style={{
@@ -300,9 +305,6 @@ function ClInput(props: IProps) {
   );
 }
 
-ClInput.options = {
-  addGlobalClass: true
-};
 ClInput.defaultProps = {
   autoFocus: false,
   titleWidth: "auto",
@@ -316,6 +318,8 @@ ClInput.defaultProps = {
   completeLoading: false,
   completes: [],
   autoComplete: false,
-  onTouchResult: () => {}
-} as IProps;
+  onTouchResult: () => {
+  }
+};
+
 export default ClInput;

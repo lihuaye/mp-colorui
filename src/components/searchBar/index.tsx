@@ -1,10 +1,11 @@
+import React from "react";
 import { Button, Input, ScrollView, Text, View } from "@tarojs/components";
-import Taro, { Component, pxTransform } from "@tarojs/taro";
-import { BG_COLOR_LIST, TEXT_COLOR_LIST } from "../../lib/model";
+import Taro, { pxTransform } from "@tarojs/taro";
+import { BG_COLOR_LIST, TEXT_COLOR_LIST } from "@/lib/model";
 import { IProps } from "../../../@types/searchBar";
 import ClCard from "../card";
 import ClSearchResult from "./searchResult";
-import { classNames } from "../../lib";
+import { classNames } from "@/lib";
 import ClIcon from "../icon";
 
 interface IState {
@@ -12,10 +13,7 @@ interface IState {
   value?: string;
 }
 
-export default class ClSearchBar extends Component<IProps, IState> {
-  static options = {
-    addGlobalClass: true
-  };
+export default class ClSearchBar extends React.Component<IProps, IState> {
 
   static defaultProps: IProps = {
     shape: "radius",
@@ -42,6 +40,15 @@ export default class ClSearchBar extends Component<IProps, IState> {
     showSearch: false,
     value: ""
   };
+
+  constructor(props) {
+    super(props);
+    this.onIconClick = this.onIconClick.bind(this)
+    this.onSearch = this.onSearch.bind(this)
+    this.onFocus = this.onFocus.bind(this)
+    this.onBlur = this.onBlur.bind(this)
+    this.onInput = this.onInput.bind(this)
+  }
 
   onIconClick(index: number) {
     this.props.onIconClick && this.props.onIconClick(index);

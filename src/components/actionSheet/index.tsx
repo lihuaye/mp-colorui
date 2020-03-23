@@ -1,22 +1,24 @@
-import Taro, { useState, useMemo, pxTransform } from "@tarojs/taro";
+// @ts-ignore
+import React, { FunctionComponent, useState, useMemo } from 'react'
+import Taro, { pxTransform } from "@tarojs/taro";
 import classNames from "classnames";
 import { IProps } from "../../../@types/actionSheet";
 import ClCard from "../card";
-import { generateId } from "../../lib";
+import { generateId } from "@/lib";
 import {
   bgColorType,
   bgColorMoreType,
   lightBgColorType
-} from "../../lib/types";
+} from "@/lib/types";
 import ClText from "../text";
 import { View } from "@tarojs/components";
 import ClLayout from "../layout";
 
 import "./index.scss";
 
-import { BG_COLOR_LIST } from "../../lib/model";
+import { BG_COLOR_LIST } from "@/lib/model";
 
-export default function ClActionSheet(props: IProps) {
+const ClActionSheet: FunctionComponent<IProps> = (props) => {
   const {
     type,
     tip,
@@ -150,10 +152,6 @@ export default function ClActionSheet(props: IProps) {
   );
 }
 
-ClActionSheet.options = {
-  addGlobalClass: true
-};
-
 ClActionSheet.defaultProps = {
   tip: "",
   isOpened: false,
@@ -163,6 +161,10 @@ ClActionSheet.defaultProps = {
   showCancel: false,
   cancelBgColor: "white",
   cancelFontColor: undefined,
-  onClick: () => {},
-  onCancel: () => {}
+  onClick: () => {
+  },
+  onCancel: () => {
+  }
 } as IProps;
+
+export default ClActionSheet

@@ -49,4 +49,4 @@ export { default as ClCalendar } from "./components/calendar";
 export { default as ClTextarea } from "./components/textarea";
 export { default as ClTree } from "./components/tree";
 
-Taro.initPxTransform({ designWidth: 750, deviceRatio: {} });
+// Taro.initPxTransform({ designWidth: 750, deviceRatio: {} });

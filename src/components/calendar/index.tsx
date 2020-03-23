@@ -1,17 +1,13 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import Taro from "@tarojs/taro";
-import { View } from "@tarojs/components";
 import { IProps } from "../../../@types/calendar";
-import { isH5, isWeApp } from "../../lib";
 
-import Calendar_h5 from "./h5";
-import Calendar_weapp from "./weapp";
+import Calendar from "./calendar";
 
-export default function ClCalendar(props: IProps) {
+const ClCalendar: FunctionComponent<IProps> = (props) => {
   return (
-    <View>
-      {isWeApp ? <Calendar_weapp {...props} /> : ""}
-      {isH5 ? <Calendar_h5 {...props} /> : ""}
-    </View>
+    <Calendar {...props} />
   );
 }
 
@@ -21,14 +17,14 @@ ClCalendar.defaultProps = {
   activeColor: "blue",
   tipDay: [],
   backToToday: true,
-  onClick: () => {},
-  onChange: () => {},
+  onClick: () => {
+  },
+  onChange: () => {
+  },
   badge: [],
   highlightWeekend: false,
   highlightWeekendColor: "blue",
   specialDay: []
 } as IProps;
 
-ClCalendar.options = {
-  addGlobalClass: true
-};
+export default ClCalendar

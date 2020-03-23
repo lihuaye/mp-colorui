@@ -1,4 +1,5 @@
-import Taro, { useState } from "@tarojs/taro";
+import React, { useState } from "react";
+import Taro from '@tarojs/taro'
 import PCAA from "area-data/pcaa";
 import { ClCard, ClLayout, ClSearchBar, ClTitleBar } from "../../../index";
 
@@ -150,6 +151,3 @@ export default function SearchBar() {
   );
 }
 
-SearchBar.config = {
-  navigationBarTitleText: "SearchBar 搜索栏"
-};

@@ -2,9 +2,185 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73229af2-3cfe-4bc9-b2f3-a4ebc94fe4ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/select/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/actionPackage/actionSheet/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/actionPackage/animation/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/actionPackage/index/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/actionPackage/loading/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/actionPackage/message/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/actionPackage/modal/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/actionPackage/progress/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/actionPackage/swiperAction/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/actionPackage/tip/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/basePackage/button/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/basePackage/color/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/basePackage/floatButton/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/basePackage/icon/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/basePackage/index/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/basePackage/text/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/formPackage/checkbox/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/formPackage/form/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/formPackage/imagePicker/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/formPackage/index/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/formPackage/input/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/formPackage/radio/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/formPackage/select/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/formPackage/switch/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/formPackage/textarea/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/formPackage/tree/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/layoutPackage/accordion/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/layoutPackage/card/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/layoutPackage/drawer/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/layoutPackage/flex/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/layoutPackage/grid/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/layoutPackage/index/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/layoutPackage/layout/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/layoutPackage/menuList/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/layoutPackage/screenDrawer/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/navigatePackage/index/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/navigatePackage/navBar/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/navigatePackage/tabBar/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/navigatePackage/tabs/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/navigatePackage/verticalTab/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/avatar/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/calendar/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/curtain/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/divider/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/index/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/noticeBar/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/searchBar/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/shopBar/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/steps/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/swiper/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/tag/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/timeline/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package/viewPackage/titleBar/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/index/index.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/update/index.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/home/quick.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/home/quick.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/accordion/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accordion/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/actionSheet/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/actionSheet/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/animation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/avatar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/avatar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/h5/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/calendar.h5.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar/weapp/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar/calendar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/h5/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/h5/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/curtain/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/curtain/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/divider/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/divider/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/drawer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/drawer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/flex/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/flex/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/floatButton/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/floatButton/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/formItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/formItem/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/grid/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icon/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icon/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/imagePicker/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imagePicker/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loading/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loading/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menuList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menuList/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/message/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/message/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navBar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/noticeBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/noticeBar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/progress/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/progress/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/radio/components/ListRadio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/radio/components/ListRadio.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/radio/h5.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/radio/h5.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/radio/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/radio/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screenDrawer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screenDrawer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/searchBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchBar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/searchBar/searchResult/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchBar/searchResult/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/select/components/alipay/mutiSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/select/components/alipay/mutiSelector.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/select/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/select/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shopBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shopBar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/steps/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/steps/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/swiper/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/swiper/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/swiperAction/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/swiperAction/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/switch/h5/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/switch/h5/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/switch/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/switch/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tabBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabBar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tabs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tag/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tag/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/text/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/text/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/textarea/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/textarea/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/timeline/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/timeline/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/timer/timer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/timer/timer.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/timer/timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/timer/timer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tip/h5/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tip/h5/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tip/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tip/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/titleBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/titleBar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tree/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tree/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/verticalTab/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/verticalTab/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/verticalTab/verticalTabCell/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/verticalTab/verticalTabCell/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/actionPackage/actionSheet/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/actionPackage/actionSheet/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/actionPackage/animation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/actionPackage/animation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/actionPackage/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/actionPackage/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/actionPackage/loading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/actionPackage/loading/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/actionPackage/message/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/actionPackage/message/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/actionPackage/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/actionPackage/modal/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/actionPackage/progress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/actionPackage/progress/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/actionPackage/swiperAction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/actionPackage/swiperAction/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/actionPackage/tip/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/actionPackage/tip/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/basePackage/button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/basePackage/button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/basePackage/color/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/basePackage/color/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/basePackage/floatButton/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/basePackage/floatButton/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/basePackage/icon/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/basePackage/icon/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/basePackage/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/basePackage/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/basePackage/text/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/basePackage/text/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/formPackage/checkbox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/formPackage/checkbox/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/formPackage/form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/formPackage/form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/formPackage/imagePicker/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/formPackage/imagePicker/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/formPackage/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/formPackage/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/formPackage/input/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/formPackage/input/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/formPackage/radio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/formPackage/radio/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/formPackage/select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/formPackage/select/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/formPackage/switch/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/formPackage/switch/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/formPackage/textarea/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/formPackage/textarea/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/formPackage/tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/formPackage/tree/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/layoutPackage/accordion/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/layoutPackage/accordion/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/layoutPackage/card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/layoutPackage/card/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/layoutPackage/drawer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/layoutPackage/drawer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/layoutPackage/flex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/layoutPackage/flex/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/layoutPackage/grid/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/layoutPackage/grid/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/layoutPackage/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/layoutPackage/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/layoutPackage/layout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/layoutPackage/layout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/layoutPackage/menuList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/layoutPackage/menuList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/layoutPackage/screenDrawer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/layoutPackage/screenDrawer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/navigatePackage/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/navigatePackage/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/navigatePackage/navBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/navigatePackage/navBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/navigatePackage/tabBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/navigatePackage/tabBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/navigatePackage/tabs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/navigatePackage/tabs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/navigatePackage/verticalTab/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/navigatePackage/verticalTab/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/avatar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/avatar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/calendar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/calendar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/curtain/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/curtain/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/divider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/divider/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/noticeBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/noticeBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/searchBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/searchBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/shopBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/shopBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/steps/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/steps/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/swiper/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/swiper/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/tag/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/tag/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/timeline/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/timeline/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package/viewPackage/titleBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/package/viewPackage/titleBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/components/menuNavigate/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/components/menuNavigate/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/update/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/update/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/category/bgColor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/category/bgColor.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,38 +234,44 @@
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Vue" />
     <property name="editor.config.ad.shown" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="13.7.0" />
     <property name="js.introduce.parameter.add.jsdoc" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
     <property name="list.type.of.created.stylesheet" value="Stylus" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs" />
-      <recent name="$PROJECT_DIR$/docs/.vuepress/public/code" />
-      <recent name="$PROJECT_DIR$/docs/.vuepress/styles" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/calendar" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public" />
       <recent name="$PROJECT_DIR$/src/style/components" />
       <recent name="$PROJECT_DIR$/src/style/category" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/public/code/button" />
-      <recent name="$PROJECT_DIR$/docs/.vuepress/public/scss" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/docs/.vuepress/public/code" />
+      <recent name="$PROJECT_DIR$/docs/.vuepress/styles" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build:h5">
@@ -276,6 +458,18 @@
       <workItem from="1582941786664" duration="182000" />
       <workItem from="1582941979700" duration="13593000" />
       <workItem from="1583907953319" duration="1300000" />
+      <workItem from="1584495761211" duration="691000" />
+      <workItem from="1584498385296" duration="150000" />
+      <workItem from="1584538160190" duration="814000" />
+      <workItem from="1584538985853" duration="762000" />
+      <workItem from="1584539775994" duration="8817000" />
+      <workItem from="1584548673235" duration="3385000" />
+      <workItem from="1584589781421" duration="5666000" />
+      <workItem from="1584717022978" duration="314000" />
+      <workItem from="1584794931542" duration="13000" />
+      <workItem from="1584800011989" duration="1651000" />
+      <workItem from="1584802518461" duration="136000" />
+      <workItem from="1584803408041" duration="13826000" />
     </task>
     <task id="LOCAL-00058" summary="fix Tip 组件 无法手动关闭 tip 的问题 #33">
       <created>1573612928358</created>
@@ -705,10 +899,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="fix: 使用Tabs时, 两个分页内容都会显示在页面上 #72" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="190" key="#ESLint" timestamp="1575279583136">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="440" y="190" key="#ESLint/-1920.0.1920.1080/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1575279583136" />
     <state x="429" y="155" key="#build" timestamp="1583908432638">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -728,10 +918,8 @@
     <state x="567" y="272" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1582941864995">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="567" y="289" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.23.1920.1057/1680.23.1920.1013/0.23.1680.1027@0.23.1680.1027" timestamp="1575862848728" />
     <state x="567" y="272" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1582941864995" />
     <state x="648" y="311" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1578130305535" />
-    <state x="648" y="317" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1920.1133@0.23.1920.1133" timestamp="1575981262982" />
     <state x="429" y="155" key="#dev:alipay" timestamp="1583817979829">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -745,11 +933,7 @@
     </state>
     <state x="431" y="123" key="CommitChangelistDialog2/-117.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583048604173" />
     <state x="431" y="123" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581605810190" />
-    <state x="431" y="2" width="915" height="924" key="CommitChangelistDialog2/-1920.0.1920.1080/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1575534365463" />
     <state x="493" y="141" key="CommitChangelistDialog2/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1578278395973" />
-    <state x="431" y="25" key="CommitChangelistDialog2/-1920.23.1920.1013/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1575875131716" />
-    <state x="431" y="25" key="CommitChangelistDialog2/-1920.23.1920.1057/1680.23.1920.1013/0.23.1680.1027@0.23.1680.1027" timestamp="1575858847608" />
-    <state x="493" y="2" key="CommitChangelistDialog2/-1920.23.1920.1057/1920.23.1920.1057/0.0.1920.1200@0.0.1920.1200" timestamp="1576029917592" />
     <state x="369" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583821142484" />
     <state x="431" y="123" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1582945288598" />
     <state x="493" y="127" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1582020262127" />
@@ -758,198 +942,193 @@
     <state x="192" y="97" width="1536" height="864" key="DiffContextDialog" timestamp="1582191305162">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="168" y="115" key="DiffContextDialog/-1920.23.1920.1013/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1575871035725" />
     <state x="192" y="97" width="1536" height="864" key="DiffContextDialog/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582191305162" />
     <state width="1419" height="217" key="GridCell.Tab.0.bottom" timestamp="1583908730757">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="817" height="230" key="GridCell.Tab.0.bottom/-117.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583035029786" />
     <state width="819" height="272" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581606878457" />
-    <state width="1659" height="189" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1575614866026" />
     <state width="938" height="268" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1578288734629" />
-    <state width="1659" height="427" key="GridCell.Tab.0.bottom/-1920.23.1920.1013/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1575875582289" />
-    <state width="1899" height="431" key="GridCell.Tab.0.bottom/-1920.23.1920.1013/1920.23.1920.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1575887015622" />
-    <state width="1659" height="188" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/1680.23.1920.1013/0.23.1680.1027@0.23.1680.1027" timestamp="1575861879001" />
-    <state width="1899" height="260" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/1920.23.1920.1057/0.0.1920.1156@0.0.1920.1156" timestamp="1576051486350" />
     <state width="938" height="268" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/1920.23.1920.1057/0.0.1920.1200@0.0.1920.1200" timestamp="1578376746971" />
     <state width="1419" height="217" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583908730757" />
-    <state width="1147" height="179" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1575949318518" />
     <state width="583" height="239" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1582010812346" />
     <state width="937" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1581750848413" />
     <state width="936" height="239" key="GridCell.Tab.0.bottom/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582195486551" />
-    <state width="1659" height="189" key="GridCell.Tab.0.bottom/0.23.1680.983@0.23.1680.983" timestamp="1575783740771" />
     <state width="1899" height="268" key="GridCell.Tab.0.bottom/0.23.1920.1131@0.23.1920.1131" timestamp="1578129974850" />
-    <state width="1899" height="431" key="GridCell.Tab.0.bottom/0.23.1920.1133@0.23.1920.1133" timestamp="1575895186756" />
     <state width="1419" height="217" key="GridCell.Tab.0.center" timestamp="1583908730755">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="817" height="230" key="GridCell.Tab.0.center/-117.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583035029784" />
     <state width="819" height="272" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581606878455" />
-    <state width="1659" height="189" key="GridCell.Tab.0.center/-1920.0.1920.1080/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1575614866016" />
     <state width="938" height="268" key="GridCell.Tab.0.center/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1578288734627" />
-    <state width="1659" height="427" key="GridCell.Tab.0.center/-1920.23.1920.1013/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1575875582288" />
-    <state width="1899" height="431" key="GridCell.Tab.0.center/-1920.23.1920.1013/1920.23.1920.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1575887015621" />
-    <state width="1659" height="188" key="GridCell.Tab.0.center/-1920.23.1920.1057/1680.23.1920.1013/0.23.1680.1027@0.23.1680.1027" timestamp="1575861879000" />
-    <state width="1899" height="260" key="GridCell.Tab.0.center/-1920.23.1920.1057/1920.23.1920.1057/0.0.1920.1156@0.0.1920.1156" timestamp="1576051486349" />
     <state width="938" height="268" key="GridCell.Tab.0.center/-1920.23.1920.1057/1920.23.1920.1057/0.0.1920.1200@0.0.1920.1200" timestamp="1578376746970" />
     <state width="1419" height="217" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583908730755" />
-    <state width="1147" height="179" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1575949318515" />
     <state width="583" height="239" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1582010812345" />
     <state width="937" height="272" key="GridCell.Tab.0.center/0.0.1920.1200@0.0.1920.1200" timestamp="1581750848412" />
     <state width="936" height="239" key="GridCell.Tab.0.center/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582195486550" />
-    <state width="1659" height="189" key="GridCell.Tab.0.center/0.23.1680.983@0.23.1680.983" timestamp="1575783740770" />
     <state width="1899" height="268" key="GridCell.Tab.0.center/0.23.1920.1131@0.23.1920.1131" timestamp="1578129974849" />
-    <state width="1899" height="431" key="GridCell.Tab.0.center/0.23.1920.1133@0.23.1920.1133" timestamp="1575895186755" />
     <state width="1419" height="217" key="GridCell.Tab.0.left" timestamp="1583908730754">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="817" height="230" key="GridCell.Tab.0.left/-117.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583035029783" />
     <state width="819" height="272" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581606878455" />
-    <state width="1659" height="189" key="GridCell.Tab.0.left/-1920.0.1920.1080/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1575614866010" />
     <state width="938" height="268" key="GridCell.Tab.0.left/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1578288734624" />
-    <state width="1659" height="427" key="GridCell.Tab.0.left/-1920.23.1920.1013/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1575875582287" />
-    <state width="1899" height="431" key="GridCell.Tab.0.left/-1920.23.1920.1013/1920.23.1920.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1575887015619" />
-    <state width="1659" height="188" key="GridCell.Tab.0.left/-1920.23.1920.1057/1680.23.1920.1013/0.23.1680.1027@0.23.1680.1027" timestamp="1575861878999" />
-    <state width="1899" height="260" key="GridCell.Tab.0.left/-1920.23.1920.1057/1920.23.1920.1057/0.0.1920.1156@0.0.1920.1156" timestamp="1576051486347" />
     <state width="938" height="268" key="GridCell.Tab.0.left/-1920.23.1920.1057/1920.23.1920.1057/0.0.1920.1200@0.0.1920.1200" timestamp="1578376746969" />
     <state width="1419" height="217" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583908730754" />
-    <state width="1147" height="179" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1575949318513" />
     <state width="583" height="239" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1582010812345" />
     <state width="937" height="272" key="GridCell.Tab.0.left/0.0.1920.1200@0.0.1920.1200" timestamp="1581750848411" />
     <state width="936" height="239" key="GridCell.Tab.0.left/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582195486549" />
-    <state width="1659" height="189" key="GridCell.Tab.0.left/0.23.1680.983@0.23.1680.983" timestamp="1575783740769" />
     <state width="1899" height="268" key="GridCell.Tab.0.left/0.23.1920.1131@0.23.1920.1131" timestamp="1578129974849" />
-    <state width="1899" height="431" key="GridCell.Tab.0.left/0.23.1920.1133@0.23.1920.1133" timestamp="1575895186755" />
     <state width="1419" height="217" key="GridCell.Tab.0.right" timestamp="1583908730756">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="817" height="230" key="GridCell.Tab.0.right/-117.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583035029785" />
     <state width="819" height="272" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581606878456" />
-    <state width="1659" height="189" key="GridCell.Tab.0.right/-1920.0.1920.1080/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1575614866022" />
     <state width="938" height="268" key="GridCell.Tab.0.right/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1578288734628" />
-    <state width="1659" height="427" key="GridCell.Tab.0.right/-1920.23.1920.1013/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1575875582289" />
-    <state width="1899" height="431" key="GridCell.Tab.0.right/-1920.23.1920.1013/1920.23.1920.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1575887015621" />
-    <state width="1659" height="188" key="GridCell.Tab.0.right/-1920.23.1920.1057/1680.23.1920.1013/0.23.1680.1027@0.23.1680.1027" timestamp="1575861879000" />
-    <state width="1899" height="260" key="GridCell.Tab.0.right/-1920.23.1920.1057/1920.23.1920.1057/0.0.1920.1156@0.0.1920.1156" timestamp="1576051486349" />
     <state width="938" height="268" key="GridCell.Tab.0.right/-1920.23.1920.1057/1920.23.1920.1057/0.0.1920.1200@0.0.1920.1200" timestamp="1578376746971" />
     <state width="1419" height="217" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583908730756" />
-    <state width="1147" height="179" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1575949318515" />
     <state width="583" height="239" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1582010812346" />
     <state width="937" height="272" key="GridCell.Tab.0.right/0.0.1920.1200@0.0.1920.1200" timestamp="1581750848413" />
     <state width="936" height="239" key="GridCell.Tab.0.right/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582195486550" />
-    <state width="1659" height="189" key="GridCell.Tab.0.right/0.23.1680.983@0.23.1680.983" timestamp="1575783740770" />
     <state width="1899" height="268" key="GridCell.Tab.0.right/0.23.1920.1131@0.23.1920.1131" timestamp="1578129974850" />
-    <state width="1899" height="431" key="GridCell.Tab.0.right/0.23.1920.1133@0.23.1920.1133" timestamp="1575895186756" />
     <state width="1899" height="413" key="GridCell.Tab.1.bottom" timestamp="1576225150060">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="413" key="GridCell.Tab.1.bottom/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1576132037365" />
     <state width="1899" height="413" key="GridCell.Tab.1.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1576225150060" />
     <state width="1899" height="413" key="GridCell.Tab.1.center" timestamp="1576225150058">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="413" key="GridCell.Tab.1.center/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1576132037361" />
     <state width="1899" height="413" key="GridCell.Tab.1.center/0.0.1920.1200@0.0.1920.1200" timestamp="1576225150058" />
     <state width="1899" height="413" key="GridCell.Tab.1.left" timestamp="1576225150057">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="413" key="GridCell.Tab.1.left/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1576132037360" />
     <state width="1899" height="413" key="GridCell.Tab.1.left/0.0.1920.1200@0.0.1920.1200" timestamp="1576225150057" />
     <state width="1899" height="413" key="GridCell.Tab.1.right" timestamp="1576225150059">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="413" key="GridCell.Tab.1.right/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1576132037364" />
     <state width="1899" height="413" key="GridCell.Tab.1.right/0.0.1920.1200@0.0.1920.1200" timestamp="1576225150059" />
     <state width="1899" height="413" key="GridCell.Tab.2.bottom" timestamp="1576225150065">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="413" key="GridCell.Tab.2.bottom/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1576132037368" />
     <state width="1899" height="413" key="GridCell.Tab.2.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1576225150065" />
     <state width="1899" height="413" key="GridCell.Tab.2.center" timestamp="1576225150061">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="413" key="GridCell.Tab.2.center/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1576132037367" />
     <state width="1899" height="413" key="GridCell.Tab.2.center/0.0.1920.1200@0.0.1920.1200" timestamp="1576225150061" />
     <state width="1899" height="413" key="GridCell.Tab.2.left" timestamp="1576225150061">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="413" key="GridCell.Tab.2.left/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1576132037366" />
     <state width="1899" height="413" key="GridCell.Tab.2.left/0.0.1920.1200@0.0.1920.1200" timestamp="1576225150061" />
     <state width="1899" height="413" key="GridCell.Tab.2.right" timestamp="1576225150062">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="413" key="GridCell.Tab.2.right/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1576132037367" />
     <state width="1899" height="413" key="GridCell.Tab.2.right/0.0.1920.1200@0.0.1920.1200" timestamp="1576225150062" />
     <state width="1899" height="413" key="GridCell.Tab.3.bottom" timestamp="1576225150068">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="413" key="GridCell.Tab.3.bottom/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1576132037371" />
     <state width="1899" height="413" key="GridCell.Tab.3.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1576225150068" />
     <state width="1899" height="413" key="GridCell.Tab.3.center" timestamp="1576225150066">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="413" key="GridCell.Tab.3.center/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1576132037370" />
     <state width="1899" height="413" key="GridCell.Tab.3.center/0.0.1920.1200@0.0.1920.1200" timestamp="1576225150066" />
     <state width="1899" height="413" key="GridCell.Tab.3.left" timestamp="1576225150065">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="413" key="GridCell.Tab.3.left/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1576132037369" />
     <state width="1899" height="413" key="GridCell.Tab.3.left/0.0.1920.1200@0.0.1920.1200" timestamp="1576225150065" />
     <state width="1899" height="413" key="GridCell.Tab.3.right" timestamp="1576225150067">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1899" height="413" key="GridCell.Tab.3.right/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1576132037370" />
     <state width="1899" height="413" key="GridCell.Tab.3.right/0.0.1920.1200@0.0.1920.1200" timestamp="1576225150067" />
     <state x="499" y="207" key="RollbackChangesDialog" timestamp="1583823865867">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="582" y="242" key="RollbackChangesDialog/-117.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583048552593" />
-    <state x="582" y="260" key="RollbackChangesDialog/-1920.23.1920.1013/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1575871039414" />
-    <state x="582" y="260" key="RollbackChangesDialog/-1920.23.1920.1057/1680.23.1920.1013/0.23.1680.1027@0.23.1680.1027" timestamp="1575858739577" />
     <state x="499" y="207" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1583823865867" />
     <state x="665" y="277" key="RollbackChangesDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1577589619498" />
-    <state x="309" y="109" width="1190" height="722" key="SettingsEditor" timestamp="1581581365082">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="353" y="112" width="1190" height="722" key="SettingsEditor" timestamp="1584539811988">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="309" y="109" width="1190" height="722" key="SettingsEditor/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581581365082" />
     <state x="353" y="124" key="SettingsEditor/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1578020126099" />
+    <state x="353" y="112" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584539811988" />
     <state x="353" y="124" width="1360" height="722" key="SettingsEditor/0.0.1920.1200@0.0.1920.1200" timestamp="1578130573505" />
-    <state x="265" y="109" key="SettingsEditor/0.23.1440.833@0.23.1440.833" timestamp="1575943742792" />
-    <state x="353" y="140" key="SettingsEditor/0.23.1920.1133@0.23.1920.1133" timestamp="1575984513890" />
+    <state x="309" y="121" width="1190" height="722" key="SettingsEditor/0.23.1680.944@0.23.1680.944" timestamp="1584498527653" />
+    <state x="353" y="124" key="SettingsEditor/0.23.1920.974@0.23.1920.974" timestamp="1584538955829" />
     <state x="420" y="255" key="Vcs.Push.Dialog.v2" timestamp="1583823909528">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="420" y="255" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1583823909528" />
     <state x="560" y="340" key="Vcs.Push.Dialog.v2/0.0.1920.1200@0.0.1920.1200" timestamp="1577846036080" />
-    <state x="100" y="123" width="1480" height="783" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1575615971667">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="653" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1584803594811">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="100" y="123" width="1480" height="783" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.23.1920.1013/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1575615971667" />
-    <state x="440" y="133" width="667" height="636" key="find.popup" timestamp="1583821259635">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="571" y="362" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584589782969" />
+    <state x="653" y="372" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584803594811" />
+    <state x="100" y="100" width="1720" height="880" key="dock-window-1" timestamp="1584548578300">
+      <screen x="0" y="23" width="1920" height="974" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="dock-window-1/0.23.1920.974@0.23.1920.974" timestamp="1584548578300" />
+    <state x="100" y="100" width="1720" height="880" key="dock-window-10" timestamp="1584548578300">
+      <screen x="0" y="23" width="1920" height="974" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="dock-window-10/0.23.1920.974@0.23.1920.974" timestamp="1584548578300" />
+    <state x="100" y="100" width="1720" height="880" key="dock-window-11" timestamp="1584548578301">
+      <screen x="0" y="23" width="1920" height="974" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="dock-window-11/0.23.1920.974@0.23.1920.974" timestamp="1584548578301" />
+    <state x="100" y="100" width="1720" height="880" key="dock-window-2" timestamp="1584548578301">
+      <screen x="0" y="23" width="1920" height="974" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="dock-window-2/0.23.1920.974@0.23.1920.974" timestamp="1584548578301" />
+    <state x="100" y="100" width="1720" height="880" key="dock-window-3" timestamp="1584548578301">
+      <screen x="0" y="23" width="1920" height="974" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="dock-window-3/0.23.1920.974@0.23.1920.974" timestamp="1584548578301" />
+    <state x="100" y="100" width="1720" height="880" key="dock-window-4" timestamp="1584548578302">
+      <screen x="0" y="23" width="1920" height="974" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="dock-window-4/0.23.1920.974@0.23.1920.974" timestamp="1584548578302" />
+    <state x="100" y="100" width="1720" height="880" key="dock-window-5" timestamp="1584548578302">
+      <screen x="0" y="23" width="1920" height="974" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="dock-window-5/0.23.1920.974@0.23.1920.974" timestamp="1584548578302" />
+    <state x="100" y="100" width="1720" height="880" key="dock-window-6" timestamp="1584548578302">
+      <screen x="0" y="23" width="1920" height="974" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="dock-window-6/0.23.1920.974@0.23.1920.974" timestamp="1584548578302" />
+    <state x="100" y="100" width="1720" height="880" key="dock-window-7" timestamp="1584548578303">
+      <screen x="0" y="23" width="1920" height="974" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="dock-window-7/0.23.1920.974@0.23.1920.974" timestamp="1584548578303" />
+    <state x="100" y="100" width="1720" height="880" key="dock-window-8" timestamp="1584548578303">
+      <screen x="0" y="23" width="1920" height="974" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="dock-window-8/0.23.1920.974@0.23.1920.974" timestamp="1584548578303" />
+    <state x="100" y="100" width="1720" height="880" key="dock-window-9" timestamp="1584548578304">
+      <screen x="0" y="23" width="1920" height="974" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="dock-window-9/0.23.1920.974@0.23.1920.974" timestamp="1584548578304" />
+    <state x="513" y="163" width="779" height="668" key="find.popup" timestamp="1584860855529">
+      <screen x="0" y="23" width="1680" height="944" />
     </state>
     <state x="513" y="155" width="682" height="741" key="find.popup/-117.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1582970115828" />
-    <state x="499" y="155" width="682" height="741" key="find.popup/-1920.0.1920.1080/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1575537279370" />
     <state x="570" y="177" width="779" height="846" key="find.popup/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1578038937376" />
-    <state x="499" y="175" width="682" height="725" key="find.popup/-1920.23.1920.1057/1680.23.1920.1013/0.23.1680.1027@0.23.1680.1027" timestamp="1575860798509" />
     <state x="440" y="133" width="667" height="636" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1583821259635" />
-    <state x="513" y="155" width="682" height="741" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1582960248836" />
-    <state x="570" y="159" width="779" height="762" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1582008295117" />
+    <state x="513" y="155" width="683" height="741" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1584592779673" />
+    <state x="570" y="159" width="779" height="762" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584800096541" />
     <state x="570" y="178" width="780" height="848" key="find.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1577033228892" />
     <state x="586" y="159" width="779" height="762" key="find.popup/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582196070913" />
+    <state x="513" y="163" width="779" height="668" key="find.popup/0.23.1680.944@0.23.1680.944" timestamp="1584860855529" />
     <state x="629" y="418" width="710" height="525" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1581581363102">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="629" y="418" width="710" height="525" key="org.intellij.images.editor.actions.BackgroundImageDialog/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581581363102" />
     <state x="719" y="478" width="700" height="600" key="org.intellij.images.editor.actions.BackgroundImageDialog/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1578019347951" />
-    <state x="503" y="231" width="672" height="680" key="search.everywhere.popup" timestamp="1582965480349">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="575" y="238" width="768" height="699" key="search.everywhere.popup" timestamp="1584541102796">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="503" y="231" width="672" height="680" key="search.everywhere.popup/-117.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1582965480349" />
-    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1080/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1575369888327" />
     <state x="575" y="264" width="768" height="776" key="search.everywhere.popup/-1920.0.1920.1080/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1578019311973" />
-    <state x="503" y="249" width="672" height="664" key="search.everywhere.popup/-1920.23.1920.1013/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1575874369289" />
-    <state x="575" y="238" width="768" height="699" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1582011839033" />
-    <state x="575" y="264" width="768" height="776" key="search.everywhere.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1575984916415" />
+    <state x="575" y="238" width="768" height="699" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584541102796" />
   </component>
 </project>

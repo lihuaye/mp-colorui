@@ -1,4 +1,4 @@
-import Taro from "@tarojs/taro";
+import React from "react";
 import { View } from "@tarojs/components";
 import { ClLayout, ClTitleBar } from "../../../index";
 import MenuNavigate from "../../../pages/components/menuNavigate";
@@ -21,6 +21,3 @@ export default function Base() {
   );
 }
 
-Base.config = {
-  navigationBarTitleText: "基础"
-};

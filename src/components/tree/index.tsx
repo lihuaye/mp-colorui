@@ -1,11 +1,12 @@
-import Taro, { pxTransform, Component } from "@tarojs/taro";
+import React from "react";
+import Taro, { pxTransform } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { IProps } from "../../../@types/tree";
 import ClCheckbox from "../checkbox";
 import ClIcon from "../icon";
 import ClText from "../text";
 import ClFlex from "../flex";
-import { generateId } from "../../lib";
+import { generateId } from "@/lib";
 
 import "./index.scss";
 
@@ -15,7 +16,7 @@ interface IState {
   flatList: any[];
 }
 
-export default class ClTree extends Component<IProps, IState> {
+export default class ClTree extends React.Component<IProps, IState> {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,9 +25,7 @@ export default class ClTree extends Component<IProps, IState> {
       flatList: []
     };
   }
-  static options = {
-    addGlobalClass: true
-  };
+
   static defaultProps: IProps = {
     showCheck: false,
     data: []
@@ -46,7 +45,7 @@ export default class ClTree extends Component<IProps, IState> {
     if (!list) return;
     let deepIndex = deep || 0;
     deepIndex++;
-    const temp = list.map((item, listIndex) => {
+    return list.map((item, listIndex) => {
       const id = listIndex + 1;
       const newLevelId = levelId ? `${levelId}-${id}` : `${id}`;
       return {
@@ -65,7 +64,6 @@ export default class ClTree extends Component<IProps, IState> {
         })
       };
     });
-    return temp;
   }
 
   public openItem(item) {
@@ -273,10 +271,7 @@ export default class ClTree extends Component<IProps, IState> {
     );
   }
 
-  componentWillReceiveProps(
-    nextProps: Readonly<IProps>,
-    nextContext: any
-  ): void {
+  componentWillReceiveProps(nextProps): void {
     this.updateData(nextProps.data);
   }
 

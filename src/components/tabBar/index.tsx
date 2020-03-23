@@ -1,10 +1,12 @@
+// @ts-ignore
+import React, { FunctionComponent, useState, useEffect } from "react";
 import { View, Image } from "@tarojs/components";
-import Taro, { useState, useEffect } from "@tarojs/taro";
+import Taro from "@tarojs/taro";
 import { classNames, isNumber } from "../../lib";
-import { BG_COLOR_LIST, TEXT_COLOR_LIST } from "../../lib/model";
+import { BG_COLOR_LIST, TEXT_COLOR_LIST } from "@/lib/model";
 import { IProps } from "../../../@types/tabBar";
 
-export default function ClTabBar(props: IProps) {
+const ClTabBar: FunctionComponent<IProps> = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -73,10 +75,6 @@ export default function ClTabBar(props: IProps) {
   );
 }
 
-ClTabBar.options = {
-  addGlobalClass: true
-};
-
 ClTabBar.defaultProps = {
   bgColor: "white",
   activeColor: "blue",
@@ -84,3 +82,5 @@ ClTabBar.defaultProps = {
   tabs: [],
   safeArea: true
 } as IProps;
+
+export default ClTabBar

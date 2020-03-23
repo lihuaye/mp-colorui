@@ -1,9 +1,11 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import Taro from "@tarojs/taro";
 import { View, Text, ScrollView } from "@tarojs/components";
-import { classNames } from "../../lib";
+import { classNames } from "@/lib";
 import { IProps } from "../../../@types/screenDrawer";
 
-export default function ClScreenDrawer(props: IProps) {
+const ClScreenDrawer: FunctionComponent<IProps> = (props) => {
   const hideModal = () => {
     props.onHide && props.onHide();
   };
@@ -31,6 +33,4 @@ export default function ClScreenDrawer(props: IProps) {
   );
 }
 
-ClScreenDrawer.options = {
-  addGlobalClass: true
-};
+export default ClScreenDrawer

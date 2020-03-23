@@ -1,3 +1,5 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import { View } from "@tarojs/components";
 import Taro, { pxTransform } from "@tarojs/taro";
 import { BG_COLOR_LIST, TEXT_COLOR_LIST } from "../../lib/model";
@@ -5,7 +7,7 @@ import { IProps } from "../../../@types/timeline";
 import ClFlex from "../flex";
 import { classNames, generateId } from "../../lib";
 
-export default function ClTimeline(props: IProps) {
+const ClTimeline: FunctionComponent<IProps> = (props) => {
   const times = props.times || [];
   const iconColorClassName = color => (color ? TEXT_COLOR_LIST[color] : "");
   const iconClassName = icon => (icon ? `cuIcon-${icon}` : "");
@@ -41,8 +43,8 @@ export default function ClTimeline(props: IProps) {
           </ClFlex>
           {item.content
             ? item.content.map((desc, index) => (
-                <View key={"key-" + index}>{desc}</View>
-              ))
+              <View key={"key-" + index}>{desc}</View>
+            ))
             : ""}
         </View>
       </View>
@@ -58,11 +60,10 @@ export default function ClTimeline(props: IProps) {
   );
 }
 
-ClTimeline.options = {
-  addGlobalClass: true
-};
-
 ClTimeline.defaultProps = {
   times: [],
-  onClick: () => {}
+  onClick: () => {
+  }
 } as IProps;
+
+export default ClTimeline

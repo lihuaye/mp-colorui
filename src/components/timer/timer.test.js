@@ -1,4 +1,4 @@
-import Nerv from "nervjs";
+import React from "react";
 import { View } from "@tarojs/components";
 import sinon from "sinon";
 
@@ -13,7 +13,7 @@ describe("Timer test", () => {
   });
 
   it("Timer test suites", () => {
-    class C extends Nerv.Component {
+    class C extends React.Component {
       constructor() {
         super(...arguments);
         this.state = {
@@ -43,7 +43,7 @@ describe("Timer test", () => {
     }
 
     const TimerRender = sinon.spy(Timer.prototype, "render");
-    Nerv.render(<C />, scratch);
+    React.render(<C />, scratch);
     expect(TimerRender.calledOnce).toBeTruthy();
     expect(scratch.innerHTML).toBe(
       '<div class="index"><div class="timer"><span class="taro-text">0:0:2</span></div></div>'

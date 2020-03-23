@@ -1,3 +1,4 @@
+import React from "react";
 import Taro, { pxTransform } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { ClSwiper, ClTitleBar } from "../../../index";
@@ -72,6 +73,3 @@ export default function SwiperView() {
   );
 }
 
-SwiperView.config = {
-  navigationBarTitleText: "Swiper 滑动视图"
-};

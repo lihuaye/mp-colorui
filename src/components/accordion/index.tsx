@@ -1,18 +1,22 @@
-import Taro, { pxTransform, useEffect, useState } from "@tarojs/taro";
+// @ts-ignore
+import React, { FunctionComponent, useEffect, useState } from "react";
+import Taro, { pxTransform } from "@tarojs/taro";
 import { View, ScrollView } from "@tarojs/components";
 import classNames from "classnames";
 
 import { IProps } from "../../../@types/accordion";
 import ClIcon from "../icon";
-import { screenPercent } from "../../lib";
-export default function ClAccordion(props: IProps) {
+import { screenPercent } from "@/lib";
+
+const ClAccordion: FunctionComponent<IProps> = (props) => {
   const { open, title, animation, onClick, card } = props;
   const [show, setShow] = useState(open);
   const [height, setHeight] = useState(0);
   const id = `cl-accordion-content-${+new Date()}`;
   useEffect(() => {
     if (show) {
-      const query = Taro.createSelectorQuery().in(this.$scope);
+      // this.$scope 暂时无法使用
+      const query = Taro.createSelectorQuery();
       const view = query.select(`#${id}`);
       view.boundingClientRect().exec(res => {
         const data = res[0];
@@ -70,23 +74,22 @@ export default function ClAccordion(props: IProps) {
             height: props.height ? pxTransform(props.height) : "100%"
           }}
         >
-          {this.props.children}
+          {props.children}
         </ScrollView>
       </View>
     </View>
   );
 }
 
-ClAccordion.options = {
-  addGlobalClass: true
-};
-
 ClAccordion.defaultProps = {
   open: false,
   title: "",
   animation: true,
-  onClick: () => {},
+  onClick: () => {
+  },
   card: false,
   speed: 0.15,
   height: 0
 } as IProps;
+
+export default ClAccordion

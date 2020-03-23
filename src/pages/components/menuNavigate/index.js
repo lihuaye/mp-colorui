@@ -1,5 +1,5 @@
-import Taro from "@tarojs/taro";
-import PropTypes from "prop-types";
+import React from "react";
+import Taro from "@tarojs/taro"
 import { ClMenuList } from "../../../index";
 
 export default function MenuNavigate(props) {
@@ -20,14 +20,6 @@ export default function MenuNavigate(props) {
   );
 }
 
-MenuNavigate.options = {
-  addGlobalClass: true
-};
-
 MenuNavigate.defaultProps = {
   list: []
-};
-
-MenuNavigate.propTypes = {
-  list: PropTypes.array
 };

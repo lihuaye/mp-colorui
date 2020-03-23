@@ -1,16 +1,16 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import Taro from '@tarojs/taro'
 import ClCard from "../../card";
 
-import {IProps} from '../../../../@types/verticalTabCell'
+import { IProps } from '../../../../@types/verticalTabCell'
 
-export default function ClVerticalTabCell(props: IProps) {
+const ClVerticalTabCell: FunctionComponent<IProps> = (props) => {
   return (
     <ClCard>
-      {this.props.children}
+      {props.children}
     </ClCard>
   )
 }
 
-ClVerticalTabCell.options = {
-  addGlobalClass: true
-}
+export default ClVerticalTabCell

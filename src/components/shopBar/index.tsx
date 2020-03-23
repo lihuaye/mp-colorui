@@ -1,13 +1,15 @@
+// @ts-ignore
+import React, { FunctionComponent, useState, useMemo } from "react";
 import { View } from "@tarojs/components";
-import Taro, { useState, useMemo } from "@tarojs/taro";
-import { classNames, generateId } from "../../lib";
-import { BG_COLOR_LIST } from "../../lib/model";
+import Taro from "@tarojs/taro";
+import { classNames, generateId } from "@/lib";
+import { BG_COLOR_LIST } from "@/lib/model";
 import { IProps } from "../../../@types/shopBar";
 import ClButton from "../button";
 
 import "./index.scss";
 
-export default function ClShopBar(props: IProps) {
+const ClShopBar: FunctionComponent<IProps> = (props) => {
   const [tabs, setTabs] = useState(props.tabs || []);
   const [buttons, setButtons] = useState(props.buttons || []);
   const onClickTab = (index: number) => {
@@ -95,16 +97,16 @@ export default function ClShopBar(props: IProps) {
   );
 }
 
-ClShopBar.options = {
-  addGlobalClass: true
-};
-
 ClShopBar.defaultProps = {
   bgColor: "white",
   tabs: [],
   buttons: [],
   border: false,
-  onClickButton: () => {},
-  onClickTab: () => {},
+  onClickButton: () => {
+  },
+  onClickTab: () => {
+  },
   safeArea: true
 };
+
+export default ClShopBar

@@ -1,4 +1,6 @@
-import Taro, { useState, useEffect, pxTransform } from "@tarojs/taro";
+// @ts-ignore
+import React, { useState, useEffect, FunctionComponent } from "react";
+import Taro, { pxTransform } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import utils, { classNames, generateId } from "../../lib/index";
 import { IProps } from "../../../@types/floatButton";
@@ -12,7 +14,7 @@ let tempPageX = 0;
 let tempPageY = 0;
 let pageX = 25;
 let pageY = 100;
-export default function ClFloatButton(props: IProps) {
+const ClFloatButton: FunctionComponent<IProps> = (props) => {
   const [show, setShow] = useState(false);
   const [rotate, setRotate] = useState(0);
   const [animation, setAnimation] = useState({});
@@ -130,7 +132,7 @@ export default function ClFloatButton(props: IProps) {
               ? pxTransform(position.left)
               : "auto"
         }}
-        animation={animation}
+        animation={[animation]}
         onTouchStart={e => {
           if (!move) return;
           const touchs = e.touches[0];
@@ -183,10 +185,6 @@ export default function ClFloatButton(props: IProps) {
   );
 }
 
-ClFloatButton.options = {
-  addGlobalClass: true
-};
-
 ClFloatButton.defaultProps = {
   move: false,
   open: true,
@@ -194,9 +192,11 @@ ClFloatButton.defaultProps = {
   bgColor: "blue",
   iconColor: undefined,
   direction: "vertical",
-  onClick: () => {},
+  onClick: () => {
+  },
   shadow: true,
-  onActionClick: () => {},
+  onActionClick: () => {
+  },
   actionList: [],
   size: "normal",
   shape: "round",
@@ -208,3 +208,5 @@ ClFloatButton.defaultProps = {
     left: "auto"
   }
 } as IProps;
+
+export default ClFloatButton

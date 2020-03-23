@@ -1,12 +1,14 @@
-import { View } from "@tarojs/components";
-import Taro, { useMemo, useState } from "@tarojs/taro";
+// @ts-ignore
+import React, { FunctionComponent, useMemo, useState } from "react";
+import { View, Block } from "@tarojs/components";
+import Taro from "@tarojs/taro";
 import { IProps } from "../../../@types/curtain";
 import ClIcon from "../icon";
 
 import "./index.scss";
-import { classNames } from "../../lib";
+import { classNames } from "@/lib";
 
-export default function ClCurtain(props: IProps) {
+const ClCurtain: FunctionComponent<IProps> = (props) => {
   const { show, closeWithShadow, closeBtnPosition } = props;
   const [showImage, setShowImage] = useState(show);
   useMemo(() => {
@@ -30,7 +32,7 @@ export default function ClCurtain(props: IProps) {
           props.onClick && props.onClick();
         }}
       >
-        {this.props.children}
+        {props.children}
         <View
           className={closeBtnPosition}
           onClick={e => {
@@ -44,19 +46,19 @@ export default function ClCurtain(props: IProps) {
       </View>
     </View>
   ) : (
-    <View />
+    <Block />
   );
 }
-
-ClCurtain.options = {
-  addGlobalClass: true
-};
 
 ClCurtain.defaultProps = {
   show: false,
   closeWithShadow: false,
   closeBtnPosition: "bottom",
-  onClose: () => {},
-  onClick: () => {},
+  onClose: () => {
+  },
+  onClick: () => {
+  },
   imgUrl: ""
 } as IProps;
+
+export default ClCurtain

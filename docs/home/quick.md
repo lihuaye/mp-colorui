@@ -49,7 +49,7 @@ import "mp-colorui/dist/style/components/avatar.scss";
 
 ## 示例
 
-在 `/myApp/src/pages/index/index.tsx` 文件添加以下代码
+在 `/myApp/src/pages/index/calendar.h5.tsx` 文件添加以下代码
 
 ```tsx
 import Taro, { Component, Config } from '@tarojs/taro'

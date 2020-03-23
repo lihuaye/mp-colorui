@@ -1,4 +1,4 @@
-import Taro from "@tarojs/taro";
+import React from "react";
 import { ClCard, ClLayout, ClTabBar, ClTitleBar } from "../../../index";
 
 const tabs = [
@@ -149,6 +149,3 @@ export default function TabBar() {
   );
 }
 
-TabBar.config = {
-  navigationBarTitleText: "TabBar 标签栏"
-};

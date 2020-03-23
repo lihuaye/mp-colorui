@@ -1,10 +1,10 @@
-import Taro from "@tarojs/taro";
+import React from "react";
 import { View } from "@tarojs/components";
-import { ClLayout, ClTitleBar } from "../../../index";
-import MenuNavigate from "../../../pages/components/menuNavigate";
-import { actionList } from "../../../constant/menu";
+import { ClLayout, ClTitleBar } from "../index.js";
+import MenuNavigate from "../pages/components/menuNavigate";
+import { actionList } from "../constant/menu";
 
-export default function Action() {
+const Action = () => {
   return (
     <View>
       <ClTitleBar
@@ -23,3 +23,5 @@ export default function Action() {
 Action.config = {
   navigationBarTitleText: "操作反馈"
 };
+
+export default Action

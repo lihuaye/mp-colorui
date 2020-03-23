@@ -1,5 +1,6 @@
 import { View } from "@tarojs/components";
-import Taro from "@tarojs/taro";
+import React from "react";
+import Taro from "@tarojs/taro"
 import {
   ClAnimation,
   ClCard,
@@ -47,9 +48,9 @@ const tabs = [
   }
 ];
 
-export default class IndexPage extends Taro.Component {
-  constructor() {
-    super();
+export default class IndexPage extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
       updated: null,
       active: 0,
@@ -57,9 +58,6 @@ export default class IndexPage extends Taro.Component {
       show: false,
       tempfilter: [],
       showUpdate: false
-    };
-    this.config = {
-      navigationBarTitleText: "MP-ColorUI"
     };
   }
 

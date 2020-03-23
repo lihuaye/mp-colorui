@@ -1,16 +1,16 @@
+import React from "react";
 import { Text, View } from "@tarojs/components";
-import Taro, { Component } from "@tarojs/taro";
-import { BG_COLOR_LIST, SIZE, TEXT_COLOR_LIST } from "../../lib/model";
+import Taro from "@tarojs/taro";
+import { BG_COLOR_LIST, SIZE, TEXT_COLOR_LIST } from "@/lib/model";
 import { IProps } from "../../../@types/modal";
-import { classNames } from "../../lib";
+import { classNames } from "@/lib";
 
-export default class ClModal extends Component<IProps, {}> {
-  static options = {
-    addGlobalClass: true
-  };
+export default class ClModal extends React.Component<IProps, {}> {
+
   state = {
     showModal: this.props.show
   };
+
   componentWillReceiveProps(nextProps: IProps) {
     const show = nextProps.show;
     if (show !== this.state.showModal) {
@@ -19,6 +19,7 @@ export default class ClModal extends Component<IProps, {}> {
       });
     }
   }
+
   render() {
     const titleBgColorClassName = this.props.titleBgColor
       ? BG_COLOR_LIST[this.props.titleBgColor]
@@ -58,9 +59,9 @@ export default class ClModal extends Component<IProps, {}> {
         style={Object.assign({}, this.props.style)}
         onClick={() => {
           this.props.closeWithShadow &&
-            this.setState({
-              showModal: false
-            });
+          this.setState({
+            showModal: false
+          });
           this.props.onCancel && this.props.onCancel();
         }}
       >

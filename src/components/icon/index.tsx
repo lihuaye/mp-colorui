@@ -1,10 +1,12 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import { Text } from "@tarojs/components";
 import Taro, { pxTransform } from "@tarojs/taro";
 import { classNames, isNumber } from "../../lib";
-import { pxMap } from "../../lib/model";
+import { pxMap } from "@/lib/model";
 import { IProps } from "../../../@types/icon";
 
-export default function ClIcon(props: IProps) {
+const ClIcon: FunctionComponent<IProps> = (props) => {
   const iconName = props.iconName || "";
   let iconNameClass = `cuIcon-${props.iconName}`;
   if (props.other) {
@@ -32,6 +34,4 @@ export default function ClIcon(props: IProps) {
   );
 }
 
-ClIcon.options = {
-  addGlobalClass: true
-};
+export default ClIcon

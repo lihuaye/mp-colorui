@@ -1,3 +1,5 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import { View } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import { IProps } from "../../../@types/divider";
@@ -5,7 +7,7 @@ import { TEXT_COLOR_LIST, SIZE } from "../../lib/model";
 import ClLayout from "../layout";
 import { classNames } from "../../lib";
 
-export default function ClDivider(props: IProps) {
+const ClDivider: FunctionComponent<IProps> = (props) => {
   const { color, size } = props;
   const colorClassName = TEXT_COLOR_LIST[color || "grey"];
   const sizeClassName = `text-${SIZE[size || "normal"]}`;
@@ -16,17 +18,16 @@ export default function ClDivider(props: IProps) {
     >
       <ClLayout padding="normal" paddingDirection="vertical">
         <View className={`${colorClassName} ${sizeClassName} cu-divider`}>
-          {this.props.children}
+          {props.children}
         </View>
       </ClLayout>
     </View>
   );
 }
 
-ClDivider.options = {
-  addGlobalClass: true
-};
 ClDivider.defaultProps = {
   color: "grey",
   size: "normal"
 } as IProps;
+
+export default ClDivider

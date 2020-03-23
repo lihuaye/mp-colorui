@@ -1,6 +1,7 @@
+import React from "react";
 import { Text, View, Image } from "@tarojs/components";
-import Taro, { useState } from "@tarojs/taro";
-import { classNames } from "../../lib";
+import Taro from "@tarojs/taro";
+import { classNames } from "@/lib";
 import {
   IProps,
   imgList as imgListType,
@@ -18,12 +19,10 @@ interface IState {
   }[];
 }
 
-export default class ClImagePicker extends Taro.Component<IProps, IState> {
-  static options = {
-    addGlobalClass: true
-  };
+export default class ClImagePicker extends React.Component<IProps, IState> {
+
   static defaultProps: IProps = {
-    beforeDel: index => true,
+    beforeDel: _ => true,
     max: 0
   };
 

@@ -1,4 +1,4 @@
-import Taro from "@tarojs/taro";
+import React from "react";
 import { View } from "@tarojs/components";
 import { ClCard, ClGrid, ClLayout, ClTitleBar } from "../../../index";
 
@@ -12,10 +12,7 @@ const generatorArr = num => {
   return arr;
 };
 
-export default class Grid extends Taro.Component {
-  config = {
-    navigationBarTitleText: "Grid 栅格布局"
-  };
+export default class Grid extends React.Component {
 
   renderComponent(num) {
     return generatorArr(num).map((un, index) => (

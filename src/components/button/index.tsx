@@ -1,10 +1,12 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import { Button, Text, View } from "@tarojs/components";
 import Taro from "@tarojs/taro";
-import { classNames } from "../../lib";
+import { classNames } from "@/lib";
 import { IProps } from "../../../@types/button";
-import { BG_COLOR_LIST, SIZE } from "../../lib/model";
+import { BG_COLOR_LIST, SIZE } from "@/lib/model";
 
-export default function ClButton(props: IProps) {
+const ClButton: FunctionComponent<IProps> = (props) => {
   const onClick = (e: any) => {
     !props.disabled && props.onClick && props.onClick(e);
   };
@@ -23,8 +25,8 @@ export default function ClButton(props: IProps) {
 
   const onGetRealnameAuthInfo = (e: any) => {
     !props.disabled &&
-      props.onGetRealnameAuthInfo &&
-      props.onGetRealnameAuthInfo(e);
+    props.onGetRealnameAuthInfo &&
+    props.onGetRealnameAuthInfo(e);
   };
   const onError = (e: any) => {
     !props.disabled && props.onError && props.onError(e);
@@ -68,7 +70,7 @@ export default function ClButton(props: IProps) {
     >
       <Text className={loadingClassName} />
       <Text>{props.text}</Text>
-      {this.props.children}
+      {props.children}
     </Button>
   );
   const longButton = (
@@ -91,10 +93,6 @@ export default function ClButton(props: IProps) {
   );
 }
 
-ClButton.options = {
-  addGlobalClass: true
-};
-
 ClButton.defaultProps = {
   shape: "radius",
   size: "normal",
@@ -108,3 +106,5 @@ ClButton.defaultProps = {
   shadow: true,
   openType: undefined
 } as IProps;
+
+export default ClButton

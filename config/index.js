@@ -5,11 +5,13 @@ const config = {
   alias: {
     "@/components": path.resolve(__dirname, "..", "src/components"),
     "@/": path.resolve(__dirname, "..", "src/"),
+    "@/lib": path.resolve(__dirname, "..", "src/lib"),
     "@types": path.resolve(__dirname, "..", "@types"),
     "mp-colorui": path.resolve(__dirname, "..", "src/index.js")
   },
   date: "2018-10-30",
   designWidth: 750,
+  framework: 'react',
   deviceRatio: {
     "640": 2.34 / 2,
     "750": 1,
@@ -90,7 +92,7 @@ if (process.env.TARO_BUILD_TYPE === "ui") {
         library: "mp-colorui"
       },
       externals: {
-        nervjs: "commonjs2 nervjs",
+        react: "commonjs2 react",
         classnames: "commonjs2 classnames",
         "@tarojs/components": "commonjs2 @tarojs/components",
         "@tarojs/taro-h5": "commonjs2 @tarojs/taro-h5",
@@ -100,7 +102,7 @@ if (process.env.TARO_BUILD_TYPE === "ui") {
   };
 }
 
-module.exports = function(merge) {
+module.exports = function (merge) {
   if (process.env.NODE_ENV === "development") {
     return merge({}, config, require("./dev"));
   }

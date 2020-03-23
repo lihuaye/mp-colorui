@@ -1,4 +1,4 @@
-import Taro from "@tarojs/taro";
+import React from "react";
 import { View } from "@tarojs/components";
 import { ClCard, ClFlex, ClLayout, ClTitleBar } from "../../../index";
 
@@ -97,6 +97,3 @@ export default function Flex() {
   );
 }
 
-Flex.config = {
-  navigationBarTitleText: "Flex 弹性布局"
-};

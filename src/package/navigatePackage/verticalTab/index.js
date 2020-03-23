@@ -1,4 +1,4 @@
-import Taro from "@tarojs/taro";
+import React from "react";
 import { View } from "@tarojs/components";
 import { ClVerticalTab, ClVerticalTabCell } from "../../../index";
 
@@ -22,6 +22,3 @@ export default function VerticalTab() {
   );
 }
 
-VerticalTab.config = {
-  navigationBarTitleText: "垂直导航 VerticalTab"
-};

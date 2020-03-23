@@ -1,4 +1,6 @@
-import Taro, { pxTransform, useState, useEffect } from "@tarojs/taro";
+// @ts-ignore
+import React, { FunctionComponent, useState, useEffect } from "react";
+import Taro, { pxTransform } from "@tarojs/taro";
 import { ScrollView, View } from "@tarojs/components";
 import { IProps } from "../../../@types/verticalTab";
 import {
@@ -7,12 +9,12 @@ import {
   getRectNumber,
   isAliPay,
   classNames
-} from "../../lib";
+} from "@/lib";
 
 import "./index.scss";
 
 let scrollTimer: any = undefined;
-export default function ClVerticalTab(props: IProps) {
+const ClVerticalTab: FunctionComponent<IProps> = (props) => {
   let scrollTab = false;
   let id = "";
   const [tabsState, setTabsState] = useState(props.tabs || []);
@@ -127,7 +129,6 @@ export default function ClVerticalTab(props: IProps) {
     <ScrollView
       scrollY
       scrollWithAnimation
-      scrollAnimationDuration={200}
       style={{
         height: props.height === "full" ? "100%" : pxTransform(props.height),
         maxHeight: "100vh",
@@ -138,14 +139,13 @@ export default function ClVerticalTab(props: IProps) {
       scrollTop={isAliPay ? undefined : scrollContent}
       enableBackToTop={props.backTop}
     >
-      {this.props.children}
+      {props.children}
     </ScrollView>
   );
   const h5Component = (
     <ScrollView
       scrollY
       scrollWithAnimation
-      scrollAnimationDuration={200}
       style={{
         height: props.height === "full" ? "100%" : pxTransform(props.height),
         maxHeight: "100vh",
@@ -155,7 +155,7 @@ export default function ClVerticalTab(props: IProps) {
       scrollTop={scrollContent}
       enableBackToTop={props.backTop}
     >
-      {this.props.children}
+      {props.children}
     </ScrollView>
   );
   return (
@@ -181,13 +181,11 @@ export default function ClVerticalTab(props: IProps) {
   );
 }
 
-ClVerticalTab.options = {
-  addGlobalClass: true
-};
-
 ClVerticalTab.defaultProps = {
   tabs: [{ name: "", id: "" }],
   height: 0,
   current: "",
   backTop: false
 } as IProps;
+
+export default ClVerticalTab

@@ -1,13 +1,15 @@
+// @ts-ignore
+import React, { FunctionComponent, useState, useEffect } from "react";
 import { View } from "@tarojs/components";
-import Taro, { useState, useEffect } from "@tarojs/taro";
+import Taro from "@tarojs/taro";
 import { IProps } from "../../../../@types/tip";
-import { screenPercent } from "../../../lib";
+import { screenPercent } from "@/lib";
 import ClText from "../../text";
 
 import "./index.scss";
-import { BG_COLOR_LIST } from "../../../lib/model";
+import { BG_COLOR_LIST } from "@/lib/model";
 
-export default function ClTip_H5(props: IProps) {
+const ClTip_H5: FunctionComponent<IProps> = (props) => {
   const [showTip, setShowTip] = useState(props.show);
   const [distance, setDistance] = useState({
     top: "auto",
@@ -17,13 +19,13 @@ export default function ClTip_H5(props: IProps) {
     transform: "",
     arrowTransform: ""
   });
-  const [id, setIdContent] = useState(
+  const [id] = useState(
     () =>
       `cl-tip-content-${Math.random()
         .toString()
         .replace(".", "")}`
   );
-  const [idMessage, setIdMessage] = useState(
+  const [idMessage] = useState(
     () =>
       `cl-tip-message-${Math.random()
         .toString()
@@ -78,18 +80,18 @@ export default function ClTip_H5(props: IProps) {
       if (res.left < res.right && res.left < screenWidth / 2) {
         if (Math.abs(translateX) > res.left) translateX = -res.left;
         distance.transform = `translateX(${translateX}px) translateY(-${res.height +
-          10}px)`;
+        10}px)`;
         distance.arrowTransform = `translateX(${Math.abs(translateX) +
-          res.width / 2 -
-          sqrt}px) rotate(45deg) translateY(0)`;
+        res.width / 2 -
+        sqrt}px) rotate(45deg) translateY(0)`;
       } else {
         const maxRight = screenWidth - res.left;
         if (maxRight < contentWidth) translateX = contentWidth - maxRight;
         distance.transform = `translateX(-${translateX}px) translateY(-${res.height +
-          10}px)`;
+        10}px)`;
         distance.arrowTransform = `translateX(${Math.abs(translateX) +
-          res.width / 2 -
-          sqrt}px) rotate(45deg) translateY(30%)`;
+        res.width / 2 -
+        sqrt}px) rotate(45deg) translateY(30%)`;
       }
     } else if (props.direction === "bottom") {
       console.log(res, messageData);
@@ -100,18 +102,18 @@ export default function ClTip_H5(props: IProps) {
       if (res.left < res.right && res.left < screenWidth / 2) {
         if (Math.abs(translateX) > res.left) translateX = -res.left;
         distance.transform = `translateX(${translateX}px) translateY(${res.height +
-          10}px)`;
+        10}px)`;
         distance.arrowTransform = `translateX(${Math.abs(translateX) +
-          res.width / 2 -
-          10}px) rotate(45deg) translateY(0)`;
+        res.width / 2 -
+        10}px) rotate(45deg) translateY(0)`;
       } else {
         const maxRight = screenWidth - res.left;
         if (maxRight < contentWidth) translateX = contentWidth - maxRight;
         distance.transform = `translateX(-${translateX}px) translateY(${res.height +
-          10}px)`;
+        10}px)`;
         distance.arrowTransform = `translateX(${Math.abs(translateX) +
-          res.width / 2 -
-          10}px) rotate(45deg) translateY(-30%)`;
+        res.width / 2 -
+        10}px) rotate(45deg) translateY(-30%)`;
       }
     } else if (props.direction === `left`) {
       const diffHeight = messageData.height - res.height;
@@ -128,11 +130,11 @@ export default function ClTip_H5(props: IProps) {
       if (moveTop > 0) moveTop = 0;
       if (moveBottom > 0) moveBottom = 0;
       distance.arrowTransform = `translateY(${messageData.height / 2 -
-        moveTop +
-        moveBottom -
-        sqrt}px) translateX(30%) rotate(45deg)`;
+      moveTop +
+      moveBottom -
+      sqrt}px) translateX(30%) rotate(45deg)`;
       distance.transform = `translateX(${-res.width -
-        10}px) translateY(${-diffHeight / 2 + moveTop - moveBottom}px)`;
+      10}px) translateY(${-diffHeight / 2 + moveTop - moveBottom}px)`;
     } else if (props.direction === "right") {
       if (leftDistance - 10 < contentWidth && leftDistance < res.left)
         props.direction = "left";
@@ -149,11 +151,11 @@ export default function ClTip_H5(props: IProps) {
       if (moveTop > 0) moveTop = 0;
       if (moveBottom > 0) moveBottom = 0;
       distance.arrowTransform = `translateY(${messageData.height / 2 -
-        moveTop +
-        moveBottom -
-        sqrt}px) translateX(-30%) rotate(45deg)`;
+      moveTop +
+      moveBottom -
+      sqrt}px) translateX(-30%) rotate(45deg)`;
       distance.transform = `translateX(${res.width +
-        10}px) translateY(${-diffHeight / 2 + moveTop - moveBottom}px)`;
+      10}px) translateY(${-diffHeight / 2 + moveTop - moveBottom}px)`;
     }
     Object.assign(distance, resver2Zero(customDirection));
     setDistance(distance);
@@ -223,12 +225,12 @@ export default function ClTip_H5(props: IProps) {
                 e.stopPropagation();
               }}
             >
-              {this.props.renderMessage}
+              {props.renderMessage}
             </View>
           </View>
         </View>
       </View>
-      {this.props.children}
+      {props.children}
     </View>
   );
 }
@@ -241,6 +243,4 @@ ClTip_H5.defaultProps = {
   width: 150
 } as IProps;
 
-ClTip_H5.options = {
-  addGlobalClass: true
-};
+export default ClTip_H5

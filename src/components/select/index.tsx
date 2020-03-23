@@ -1,14 +1,16 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import { Picker, View } from "@tarojs/components";
 import Taro, { useState, useMemo } from "@tarojs/taro";
-import { classNames, getNowDate, isAliPay } from "../../lib";
+import { classNames, getNowDate, isAliPay } from "@/lib";
 import { IProps } from "../../../@types/select";
-import { getAreaData } from "../../lib/area";
+import { getAreaData } from "@/lib/area";
 
 import "./index.scss"
 
 import AlipayMutiSelect from "./components/alipay/mutiSelector";
 
-function ClSelect(props: IProps) {
+const ClSelect: FunctionComponent<IProps> = (props) => {
   const selector = {
     range: (props.selector && props.selector.range) || [],
     value: (props.selector && props.selector.value) || 0,
@@ -58,13 +60,15 @@ function ClSelect(props: IProps) {
       getRegionData().map(item => item[0])
   };
   // 单选
-  const getSelectorValue = index =>
+  const getSelectorValue = (index) =>
     selector.rangeKey
       ? selector.range[index][selector.rangeKey]
       : selector.range[index];
-  const [selected, setSelected] = useState(() =>
-    getSelectorValue(selector.value)
-  );
+
+  const a = getSelectorValue(selector.value)
+  console.log(a)
+  console.log(selector.range)
+  const [selected, setSelected] = useState(a);
   const setSelect = index => {
     const value: string = getSelectorValue(index);
     setSelected(value);
@@ -332,9 +336,6 @@ function ClSelect(props: IProps) {
   );
 }
 
-ClSelect.options = {
-  addGlobalClass: true
-};
 ClSelect.defaultProps = {
   mode: "selector",
   selector: [],
@@ -343,4 +344,5 @@ ClSelect.defaultProps = {
   date: [],
   region: []
 } as IProps;
+
 export default ClSelect;

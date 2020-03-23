@@ -1,10 +1,12 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import { Checkbox, CheckboxGroup, Text, View } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import { IProps } from "../../../@types/checkbox";
 import ClCheckboxH5 from "./h5";
 import { classNames, isWeApp } from "../../lib";
 
-export default function ClCheckbox(props: IProps) {
+const ClCheckbox: FunctionComponent<IProps> = (props) => {
   const colorClassName = props.color || "green";
   const type = props.type === "form" ? "form" : "";
   const shapeClassName = props.shape === "round" ? "round" : "";
@@ -61,6 +63,4 @@ export default function ClCheckbox(props: IProps) {
   );
 }
 
-ClCheckbox.options = {
-  addGlobalClass: true
-};
+export default ClCheckbox

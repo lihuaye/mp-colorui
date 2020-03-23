@@ -1,4 +1,6 @@
-import Taro, { useState, useEffect } from "@tarojs/taro";
+// @ts-ignore
+import React, { FunctionComponent, useState, useEffect } from "react";
+import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import ClFlex from "../../flex";
 import ClText from "../../text";
@@ -7,7 +9,8 @@ import ClIcon from "../../icon";
 
 import { classNames, generateId } from "../../../lib";
 import "./index.scss";
-export default function ClSearchResult(props: {
+
+const ClSearchResult: FunctionComponent<{
   result?: {
     title?: string;
     desc?: string;
@@ -16,7 +19,7 @@ export default function ClSearchResult(props: {
   onTouchResult: (index: number) => void;
   className?: any;
   style?: any;
-}) {
+}> = (props) => {
   const [resultState, setResultState] = useState(props.result || []);
   useEffect(() => {
     const list = props.result || [];
@@ -66,6 +69,4 @@ export default function ClSearchResult(props: {
   );
 }
 
-ClSearchResult.options = {
-  addGlobalClass: true
-};
+export default ClSearchResult

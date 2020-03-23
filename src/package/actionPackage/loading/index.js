@@ -1,4 +1,4 @@
-import Taro, { useState } from "@tarojs/taro";
+import React, { useState } from "react";
 import {
   ClCard,
   ClLayout,
@@ -211,6 +211,3 @@ export default function Loading() {
   );
 }
 
-Loading.config = {
-  navigationBarTitleText: "Loading 加载"
-};

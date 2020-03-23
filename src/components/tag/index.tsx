@@ -1,24 +1,26 @@
+import React from "react";
 import { View } from "@tarojs/components";
-import Taro, { Component } from "@tarojs/taro";
+import Taro from "@tarojs/taro";
 import { BG_COLOR_LIST } from "../../lib/model";
 import { bgColorType } from "../../lib/types";
 import { IProps } from "../../../@types/tag";
 import { classNames } from "../../lib";
 
-interface IState {}
+interface IState {
+}
 
-export default class ClTag extends Component<IProps, IState> {
-  static options = {
-    addGlobalClass: true
-  };
+export default class ClTag extends React.Component<IProps, IState> {
+
   static defaultProps = {
     shape: "normal",
     size: "normal",
     tags: []
   } as IProps;
+
   onClick(index: number) {
     this.props.onClick && this.props.onClick(index);
   }
+
   render() {
     const shapeClassName = this.props.shape
       ? this.props.shape === "normal"

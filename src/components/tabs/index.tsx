@@ -1,6 +1,7 @@
-import { ScrollView, Text, View } from "@tarojs/components";
-import Taro, { Component, pxTransform } from "@tarojs/taro";
-import { BG_COLOR_LIST, TEXT_COLOR_LIST } from "../../lib/model";
+import React from "react";
+import { ScrollView, Text, View, Block } from "@tarojs/components";
+import Taro, { pxTransform } from "@tarojs/taro";
+import { BG_COLOR_LIST, TEXT_COLOR_LIST } from "@/lib/model";
 import { IProps } from "../../../@types/tabs";
 
 import "./index.scss";
@@ -16,10 +17,8 @@ let move = 0;
 let scrollLeftContent = 0;
 let duration = 0.3;
 let distance = 0;
-export default class ClTabs extends Component<IProps, IState> {
-  static options = {
-    addGlobalClass: true
-  };
+export default class ClTabs extends React.Component<IProps, IState> {
+
   static defaultProps: IProps = {
     type: "default",
     bgColor: undefined,
@@ -35,12 +34,13 @@ export default class ClTabs extends Component<IProps, IState> {
   };
 
   componentDidMount(): void {
-    this.onClickTab(this.props.active || 0);
+    setTimeout(() => {
+      this.onClickTab(this.props.active || 0);
+    }, 100)
   }
 
   componentWillReceiveProps(
-    nextProps: Readonly<IProps>,
-    nextContext: any
+    nextProps: Readonly<IProps>
   ): void {
     const nextActive = nextProps.active;
     const thisActive = this.props.active;
@@ -194,8 +194,6 @@ export default class ClTabs extends Component<IProps, IState> {
     const activeColor: string = this.props.activeColor
       ? TEXT_COLOR_LIST[this.props.activeColor]
       : "";
-    // 空组件镇压邪魔
-    const centerComponent = <View />;
     const renderComponent = () => {
       const { type, tabs } = this.props;
       const { activeTab, scrollLeft } = this.state;
@@ -212,7 +210,7 @@ export default class ClTabs extends Component<IProps, IState> {
         return this.renderVerbComponent(defaultParameter);
       else if (type === "center")
         return this.renderCenterComponent(defaultParameter);
-      else return <View />;
+      else return <Block />;
     };
     return (
       <View
@@ -249,7 +247,7 @@ export default class ClTabs extends Component<IProps, IState> {
             onTouchEnd={e => {
               if (!this.props.touchMove) return;
               duration = 0.3;
-              move = e.changedTouches[0].pageX - move;
+              move = e.changedTouches[0].x - move;
               const maxIndex = this.props.tabs.length - 1;
               if (move < -50)
                 this.onClickTab(

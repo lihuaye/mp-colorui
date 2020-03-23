@@ -1,6 +1,8 @@
-import Taro, { useEffect, useState } from "@tarojs/taro";
+// @ts-ignore
+import React, { useEffect, useState } from "react";
+import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
-import { classNames } from "../../../lib";
+import { classNames } from "@/lib";
 import { IProps } from "../../../../@types/formItem";
 // import { FormContext } from '../index'
 import defaultRules from "../../../lib/rules";
@@ -8,12 +10,13 @@ import defaultRules from "../../../lib/rules";
 import context from "../context";
 import "./index.scss";
 
-export default class ClFormItem extends Taro.Component<IProps> {
+export default class ClFormItem extends React.Component<IProps> {
   // static contextType = FormContext
   static defaultProps: IProps = {
     prop: "",
     required: false
   };
+
   render() {
     const [tip, setTip] = useState("");
     const [err, setErr] = useState(false);
@@ -27,7 +30,7 @@ export default class ClFormItem extends Taro.Component<IProps> {
     const value = modelData[prop || ""] || "";
     const ruleFunc =
       rulesData[prop || ""] ||
-      function() {
+      function () {
         return true;
       };
     // let message = ''

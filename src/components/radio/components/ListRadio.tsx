@@ -1,16 +1,18 @@
-import Taro, { useState, useEffect } from "@tarojs/taro";
+// @ts-ignore
+import React, { FunctionComponent, useState, useEffect } from "react";
+import Taro from "@tarojs/taro";
 import { Text, View } from "@tarojs/components";
 import { TList } from "../../../../@types/radio";
 import { classNames, generateId } from "../../../lib";
 
 interface IProps {
   list: TList;
-  checkedValue: String;
+  checkedValue?: String;
   onChange: (value) => void;
-  disabled: boolean;
+  disabled?: boolean;
 }
 
-export default function ListRadio(props: IProps) {
+const ListRadio: FunctionComponent<IProps> = (props) => {
   const [listState, setListState] = useState(props.list || []);
   useEffect(() => {
     const list = props.list || [];
@@ -52,10 +54,9 @@ export default function ListRadio(props: IProps) {
 ListRadio.defaultProps = {
   list: [],
   checkedValue: "",
-  onChange: () => {},
+  onChange: () => {
+  },
   disabled: false
 } as IProps;
 
-ListRadio.options = {
-  addGlobalClass: true
-};
+export default ListRadio

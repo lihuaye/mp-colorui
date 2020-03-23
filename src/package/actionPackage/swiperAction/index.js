@@ -1,4 +1,5 @@
-import Taro from "@tarojs/taro";
+import React from "react";
+import Taro from "@tarojs/taro"
 import { View } from "@tarojs/components";
 import { ClSwiperAction, ClCard, ClTitleBar } from "../../../index";
 
@@ -89,6 +90,3 @@ export default function SwiperAction() {
   );
 }
 
-SwiperAction.config = {
-  navigationBarTitleText: "SwiperAction 滑动操作"
-};

@@ -1,10 +1,12 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import { Switch, View } from "@tarojs/components";
 import Taro from "@tarojs/taro";
-import { classNames } from "../../lib";
+import { classNames } from "@/lib";
 import { IProps } from "../../../@types/switch";
 import ClSwitch_h5 from "./h5";
 
-export default function ClSwitch(props: IProps) {
+const ClSwitch: FunctionComponent<IProps> = (props) => {
   const title = props.title;
   const color = props.color || "green";
   const shapeClassName = props.shape !== "radius" ? "" : "radius";
@@ -36,7 +38,7 @@ export default function ClSwitch(props: IProps) {
     </View>
   );
   return Taro.getEnv() === Taro.ENV_TYPE.WEB ? (
-    <ClSwitch_h5 {...this.props} />
+    <ClSwitch_h5 {...props} />
   ) : type === "form" ? (
     formSwitchComponent
   ) : (
@@ -44,6 +46,4 @@ export default function ClSwitch(props: IProps) {
   );
 }
 
-ClSwitch.options = {
-  addGlobalClass: true
-};
+export default ClSwitch

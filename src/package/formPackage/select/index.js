@@ -1,4 +1,4 @@
-import Taro from "@tarojs/taro";
+import React from "react";
 import { ClCard, ClLayout, ClSelect, ClTitleBar } from "../../../index";
 
 const single = ["苹果", "桃子", "葡萄", "火龙果", "西瓜"];
@@ -69,7 +69,3 @@ export default function Select() {
     </ClLayout>
   );
 }
-
-Select.options = {
-  navigationBarTitleText: "Select 选择器"
-};

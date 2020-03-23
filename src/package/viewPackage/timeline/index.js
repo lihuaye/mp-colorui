@@ -1,10 +1,8 @@
+import React from "react";
 import Taro from "@tarojs/taro";
 import { ClLayout, ClTimeline, ClTitleBar } from "../../../index";
 
-export default class Timeline extends Taro.Component {
-  config = {
-    navigationBarTitleText: "Timeline 时间轴"
-  };
+export default class Timeline extends React.Component {
 
   render() {
     return (

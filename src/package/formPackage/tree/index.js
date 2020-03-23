@@ -1,4 +1,5 @@
-import Taro from "@tarojs/taro";
+import React from "react";
+import Taro from "@tarojs/taro"
 import { View } from "@tarojs/components";
 import { ClTitleBar, ClCard, ClTree } from "../../../index";
 
@@ -63,6 +64,3 @@ export default function Tree() {
   );
 }
 
-Tree.config = {
-  navigationBarTitleText: "Tree 树形结构"
-};

@@ -1,7 +1,9 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import { View } from "@tarojs/components";
 import Taro from "@tarojs/taro";
-import { classNames } from "../../lib";
-import { SIZE } from "../../lib/model";
+import { classNames } from "@/lib";
+import { SIZE } from "@/lib/model";
 import { IProps } from "../../../@types/layout";
 
 /**
@@ -9,7 +11,7 @@ import { IProps } from "../../../@types/layout";
  * basis-xs, basis-df, basis-lg, basis-xl
  */
 
-export default function ClLayout(props: IProps) {
+const ClLayout: FunctionComponent<IProps> = (props) => {
   const floatClassName = () => {
     if (props.float === "left") return "fl";
     if (props.float === "right") return "fr";
@@ -45,18 +47,18 @@ export default function ClLayout(props: IProps) {
     const size = props.padding;
 
     return `${(size ? "padding" : "") +
-      dealDirection(paddingDirection) +
-      dealSize(size)}`;
+    dealDirection(paddingDirection) +
+    dealSize(size)}`;
   };
   const marginClassName = () => {
     const marginDirection = props.marginDirection;
     const size = props.margin;
 
     return `${(size ? "margin" : "") +
-      dealDirection(marginDirection) +
-      dealSize(size)}`;
+    dealDirection(marginDirection) +
+    dealSize(size)}`;
   };
-  const normalComponent = (
+  return (
     <View
       className={classNames(
         `${floatClassName()} ${props.padding ? paddingClassName() : ""} ${
@@ -66,12 +68,9 @@ export default function ClLayout(props: IProps) {
       )}
       style={Object.assign({}, props.style)}
     >
-      {this.props.children}
+      {props.children}
     </View>
   );
-  return normalComponent;
 }
 
-ClLayout.options = {
-  addGlobalClass: true
-};
+export default ClLayout

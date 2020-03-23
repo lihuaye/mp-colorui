@@ -1,4 +1,4 @@
-import Taro, { useState } from "@tarojs/taro";
+import React, { useState } from "react";
 import { View } from "@tarojs/components";
 import { ClButton, ClCard, ClLayout, ClScreenDrawer } from "../../../index";
 
@@ -36,6 +36,3 @@ export default function ScreenDrawer() {
   );
 }
 
-ScreenDrawer.config = {
-  navigationBarTitleText: "ScreenDrawer 全屏抽屉"
-};

@@ -1,4 +1,4 @@
-import Taro, { useState } from "@tarojs/taro";
+import React, { useState } from "react";
 import { ClButton, ClLayout, ClTitleBar, ClAnimation } from "../../../index";
 
 export default function Animation() {

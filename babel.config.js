@@ -3,21 +3,24 @@ const apis = require("@tarojs/taro-h5/dist/taroApis");
 
 module.exports = {
   presets: [
-    [
-      "@babel/env",
+    ["@babel/env",
       {
         spec: true,
         useBuiltIns: false
       }
-    ]
+    ],
+    ['taro', {
+      framework: 'react',
+      ts: true
+    }]
   ],
   plugins: [
     "@babel/plugin-proposal-class-properties",
     [
       "@babel/plugin-transform-react-jsx",
-      {
-        pragma: "Nerv.createElement"
-      }
+      // {
+      //   pragma: "Nerv.createElement"
+      // }
     ],
     ["@babel/plugin-proposal-object-rest-spread"],
     [
@@ -26,6 +29,6 @@ module.exports = {
         apis,
         packageName: "@tarojs/taro-h5"
       }
-    ]
+    ],
   ]
 };

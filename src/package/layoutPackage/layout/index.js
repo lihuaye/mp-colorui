@@ -1,4 +1,4 @@
-import Taro from "@tarojs/taro";
+import React from "react";
 import { View } from "@tarojs/components";
 import { ClCard, ClLayout, ClTitleBar } from "../../../index";
 
@@ -48,6 +48,3 @@ export default function Layout() {
   );
 }
 
-Layout.config = {
-  navigationBarTitleText: "Layout 基本布局"
-};

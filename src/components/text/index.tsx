@@ -1,6 +1,8 @@
+// @ts-ignore
+import React, { FunctionComponent } from "react";
 import { View, Text } from "@tarojs/components";
 import Taro, { pxTransform } from "@tarojs/taro";
-import { BG_COLOR_LIST, pxMap, SIZE, TEXT_COLOR_LIST } from "../../lib/model";
+import { BG_COLOR_LIST, pxMap, TEXT_COLOR_LIST } from "../../lib/model";
 import { IProps } from "../../../@types/text";
 
 import "./index.scss";
@@ -24,7 +26,7 @@ const FONT_SPACING = {
   large: 20
 };
 
-export default function ClText(props: IProps) {
+const ClText: FunctionComponent<IProps> = (props: IProps) => {
   const lineSpacing = props.lineSpacing || "none";
   const fontSpacing = props.fontSpacing || "none";
   const size = isNumber(props.size) ? props.size : props.size || "normal";
@@ -53,18 +55,18 @@ export default function ClText(props: IProps) {
             lineSpacing === "none"
               ? "normal"
               : pxTransform(
-                  isNumber(lineSpacing)
-                    ? lineSpacing
-                    : LINE_SPACING[lineSpacing]
-                ),
+              isNumber(lineSpacing)
+                ? lineSpacing
+                : LINE_SPACING[lineSpacing]
+              ),
           letterSpacing:
             fontSpacing === "none"
               ? "normal"
               : pxTransform(
-                  isNumber(fontSpacing)
-                    ? fontSpacing
-                    : FONT_SPACING[fontSpacing]
-                ),
+              isNumber(fontSpacing)
+                ? fontSpacing
+                : FONT_SPACING[fontSpacing]
+              ),
           fontWeight: props.fontWeight,
           fontSize
         },
@@ -85,15 +87,11 @@ export default function ClText(props: IProps) {
         )}
       >
         {props.text}
-        {this.props.children}
+        {props.children}
       </Text>
     </View>
   );
 }
-
-ClText.options = {
-  addGlobalClass: true
-};
 
 ClText.defaultProps = {
   size: "normal",
@@ -107,4 +105,6 @@ ClText.defaultProps = {
   fontSpacing: "none",
   fontWeight: "normal",
   wrap: true
-} as IProps;
+};
+
+export default ClText

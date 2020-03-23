@@ -1,4 +1,4 @@
-import Taro from "@tarojs/taro";
+import React from "react";
 import { View } from "@tarojs/components";
 import { ClDivider, ClTitleBar } from "../../../index";
 
@@ -19,6 +19,3 @@ export default function Divider() {
   );
 }
 
-Divider.config = {
-  navigationBarTitleText: "Divider 分割线"
-};

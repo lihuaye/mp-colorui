@@ -1,6 +1,7 @@
+import React from "react";
 import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
-import { classNames } from "../../lib";
+import { classNames } from "@/lib";
 import { IProps } from "../../../@types/form";
 import defaultRules from "../../lib/rules";
 import context from "./context";
@@ -11,16 +12,14 @@ type init = {
 };
 
 const date: init = {};
-export const FormContext = Taro.createContext(date);
-export default class ClForm extends Taro.Component<IProps> {
+export const FormContext = React.createContext(date);
+export default class ClForm extends React.Component<IProps> {
   static contextType = FormContext;
   static defaultProps: IProps = {
     model: {},
     rules: {}
   };
-  static options = {
-    addGlobalClass: true
-  };
+
   validate(fn) {
     let flag = true;
     const { model, rules } = this.props;
@@ -30,10 +29,12 @@ export default class ClForm extends Taro.Component<IProps> {
     ruleKeys.forEach(key => {
       const ruleFunc = rulesData[key];
       const value = modelData[key];
-      flag = flag && ruleFunc(defaultRules, value, () => {});
+      flag = flag && ruleFunc(defaultRules, value, () => {
+      });
     });
     return fn(flag);
   }
+
   render(): any {
     const { model, rules } = this.props;
     context.provider = {

@@ -1,18 +1,20 @@
-import Taro, { pxTransform, useEffect, useState } from "@tarojs/taro";
+// @ts-ignore
+import React, { FunctionComponent, useEffect, useState } from "react";
+import Taro, { pxTransform } from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 import { IProps } from "../../../@types/noticeBar";
 import ClText from "../text";
 import ClIcon from "../icon/index";
 import ClFlex from "../flex";
-import { BG_COLOR_LIST } from "../../lib/model";
-import { generateId, isH5, screenPercent } from "../../lib";
+import { BG_COLOR_LIST } from "@/lib/model";
+import { generateId, screenPercent } from "../../lib";
 import classnames from "classnames";
 import ClLayout from "../layout";
 import "../text/index.scss";
 
 import "./index.scss";
 
-export default function ClNoticeBar(props: IProps) {
+const ClNoticeBar: FunctionComponent<IProps> = (props) => {
   const {
     text,
     bgColor,
@@ -43,10 +45,12 @@ export default function ClNoticeBar(props: IProps) {
       if (close) width += 50;
       setSingleContentWidth(`calc(100vw - ${pxTransform(width)})`);
     }
-    const query = Taro.createSelectorQuery().in(this.$scope);
+    // this.$scope 暂时无法使用
+    const query = Taro.createSelectorQuery();
+
     const promise = new Promise(resolve => {
       query
-        .select(isH5 ? contentId : "#contentId")
+        .select(`#${contentId}`)
         .boundingClientRect(content => {
           resolve(content);
         })
@@ -54,7 +58,7 @@ export default function ClNoticeBar(props: IProps) {
     });
     promise.then((content: any) => {
       query
-        .select(isH5 ? textId : "#textId")
+        .select(`#${textId}`)
         .boundingClientRect((res: any) => {
           if (res.width < content.width) {
             setMarqueeClass(false);
@@ -62,6 +66,7 @@ export default function ClNoticeBar(props: IProps) {
             return;
           }
           setContentWidth(-res.width);
+
           function beginInterval(time) {
             let timer;
             timer = setInterval(() => {
@@ -80,10 +85,12 @@ export default function ClNoticeBar(props: IProps) {
               }, 50);
             }, (time as number) * 1000);
           }
+
           beginInterval(marqueeSpeed);
         })
         .exec();
     });
+
   }, [props.showMore, props.single, props.speed]);
 
   const showMoreComponent = showMore ? (
@@ -146,7 +153,7 @@ export default function ClNoticeBar(props: IProps) {
             </View>
           </ClLayout>
           <View
-            id={isH5 ? contentId : "contentId"}
+            id={contentId}
             style={{
               flex: "1 1 auto",
               overflow: "hidden",
@@ -171,7 +178,7 @@ export default function ClNoticeBar(props: IProps) {
               }}
             >
               <Text
-                id={isH5 ? textId : "textId"}
+                id={textId}
                 className={classnames([
                   {
                     "cl-text__nowrap": single,
@@ -192,10 +199,6 @@ export default function ClNoticeBar(props: IProps) {
   );
 }
 
-ClNoticeBar.options = {
-  addGlobalClass: true
-};
-
 ClNoticeBar.defaultProps = {
   text: "",
   bgColor: "light-yellow",
@@ -206,6 +209,10 @@ ClNoticeBar.defaultProps = {
   moreText: "查看详情",
   icon: "notificationfill",
   close: false,
-  onClose: () => {},
-  onMore: () => {}
+  onClose: () => {
+  },
+  onMore: () => {
+  }
 } as IProps;
+
+export default ClNoticeBar

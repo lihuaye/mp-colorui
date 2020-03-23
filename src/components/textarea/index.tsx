@@ -1,15 +1,17 @@
-import Taro, { useState, useEffect, pxTransform } from "@tarojs/taro";
+// @ts-ignore
+import React, { FunctionComponent, useEffect, useState } from "react";
+import Taro, { pxTransform } from "@tarojs/taro";
 import { Textarea, View } from "@tarojs/components";
 import { IProps } from "../../../@types/textarea";
 import ClFlex from "../../components/flex";
 import ClText from "../../components/text";
 import ClLayout from "../../components/layout";
-import { classNames } from "../../lib";
+import { classNames } from "@/lib";
 
 import "./index.scss";
-import { BG_COLOR_LIST } from "../../lib/model";
+import { BG_COLOR_LIST } from "@/lib/model";
 
-export default function ClTextarea(props: IProps) {
+const ClTextarea: FunctionComponent<IProps> = (props: IProps) => {
   const {
     value,
     autoFocus,
@@ -108,9 +110,6 @@ export default function ClTextarea(props: IProps) {
   );
 }
 
-ClTextarea.options = {
-  addGlobalClass: true
-};
 ClTextarea.defaultProps = {
   value: "",
   autoFocus: false,
@@ -124,9 +123,16 @@ ClTextarea.defaultProps = {
   overMaxForbidden: false,
   bgColor: "white",
   shadow: false,
-  onChange: () => {},
-  onFocus: () => {},
-  onBlur: () => {},
-  onConfirm: () => {},
-  onLineChange: () => {}
+  onChange: () => {
+  },
+  onFocus: () => {
+  },
+  onBlur: () => {
+  },
+  onConfirm: () => {
+  },
+  onLineChange: () => {
+  }
 } as IProps;
+
+export default ClTextarea

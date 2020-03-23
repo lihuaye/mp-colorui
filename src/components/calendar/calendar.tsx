@@ -1,20 +1,22 @@
-import Taro, { useState, useEffect, pxTransform } from "@tarojs/taro";
+// @ts-ignore
+import React, { FunctionComponent, useState, useEffect, ReactElement } from "react";
+import Taro, { pxTransform } from "@tarojs/taro";
 import { View, Swiper, SwiperItem } from "@tarojs/components";
-import { IProps } from "../../../../@types/calendar";
+import { IProps } from "../../../@types/calendar";
 import dayjs from "dayjs";
-import ClGrid from "../../grid";
-import ClText from "../../text";
-import ClFlex from "../../flex";
-import ClLayout from "../../layout";
-import ClCard from "../../card";
-import { classNames } from "../../../lib";
-import { BG_COLOR_LIST, TEXT_COLOR_LIST } from "../../../lib/model";
-import ClButton from "../../button";
-import ClTip from "../../tip";
+import ClGrid from "../grid";
+import ClText from "../text";
+import ClFlex from "../flex";
+import ClLayout from "../layout";
+import ClCard from "../card";
+import { classNames } from "@/lib";
+import { BG_COLOR_LIST, TEXT_COLOR_LIST } from "@/lib/model";
+import ClButton from "../button";
+import ClTip from "../tip";
 
-import "../index.scss";
+import "./index.scss";
 
-export default function Calendar_weapp(props: IProps) {
+const Calendar_weapp: FunctionComponent<IProps> = (props) => {
   const {
     highlightWeekendColor,
     calendarType,
@@ -59,6 +61,7 @@ export default function Calendar_weapp(props: IProps) {
     changeMonth(date);
     setShowMonths(false);
   };
+
   function dealYearMonth(day) {
     return `${day.year()}年${day.month() + 1}月`;
   }
@@ -95,27 +98,27 @@ export default function Calendar_weapp(props: IProps) {
     const varChange =
       calendarType === "week"
         ? {
-            PRE: PRE_WEEK,
-            THIS: THIS_WEEK,
-            NEXT: NEXT_WEEK
-          }
+          PRE: PRE_WEEK,
+          THIS: THIS_WEEK,
+          NEXT: NEXT_WEEK
+        }
         : {
-            PRE: PRE_MONTH,
-            THIS: THIS_MONTH,
-            NEXT: NEXT_MONTH
-          };
+          PRE: PRE_MONTH,
+          THIS: THIS_MONTH,
+          NEXT: NEXT_MONTH
+        };
     const dataChange =
       calendarType === "week"
         ? {
-            PRE: "tempPreWeek",
-            THIS: "tempThisWeek",
-            NEXT: "tempNextWeek"
-          }
+          PRE: "tempPreWeek",
+          THIS: "tempThisWeek",
+          NEXT: "tempNextWeek"
+        }
         : {
-            PRE: "tempPreMonth",
-            THIS: "tempThisMonth",
-            NEXT: "tempNextMonth"
-          };
+          PRE: "tempPreMonth",
+          THIS: "tempThisMonth",
+          NEXT: "tempNextMonth"
+        };
     let current = {
       [varChange.PRE]: data[dataChange.PRE],
       [varChange.THIS]: data[dataChange.THIS],
@@ -425,8 +428,8 @@ export default function Calendar_weapp(props: IProps) {
         textColor={
           highlightWeekend
             ? [0, 6].includes(index)
-              ? highlightWeekendColor
-              : "black"
+            ? highlightWeekendColor
+            : "black"
             : "black"
         }
       >
@@ -437,99 +440,13 @@ export default function Calendar_weapp(props: IProps) {
   const BGClassName = BG_COLOR_LIST[activeColor || "blue"];
   const oldTextClassName = TEXT_COLOR_LIST["gray"];
 
-  const weeksComponent = [preWeek, thisWeek, nextWeek].map((week, index) => (
-    <SwiperItem key={week[3].date}>
-      <ClGrid col={7}>
-        {week.map(item => (
-          <View
-            key={item.timeStamp}
-            onClick={clickDate.bind(this, {
-              item,
-              type: mapChangeWeekIndex[index]
-            })}
-          >
-            <ClLayout padding={"small"} paddingDirection={"vertical"}>
-              <ClFlex align={"center"} justify={"center"}>
-                <View
-                  style={{
-                    position: "relative"
-                  }}
-                  className={classNames([
-                    "day-normal",
-                    `${item.disabled ? BG_COLOR_LIST["gray"] : ""}`,
-                    `${
-                      item.special.show && !item.active
-                        ? BG_COLOR_LIST[item.special.color]
-                        : ""
-                    }`,
-                    {
-                      [BGClassName]: !item.disabled && item.active,
-                      [oldTextClassName]: item.old
-                    }
-                  ])}
-                >
-                  <View
-                    className={classNames([
-                      {
-                        ["cu-tag badge"]: item.badge.show
-                      },
-                      BG_COLOR_LIST[item.badge.color]
-                    ])}
-                  >
-                    {item.badge.num}
-                  </View>
-                  <ClFlex
-                    align={"center"}
-                    justify={"center"}
-                    direction={"column"}
-                  >
-                    <ClText
-                      size={12}
-                      align={"center"}
-                      cut={true}
-                      style={{ maxWidth: pxTransform(50) }}
-                      textColor={
-                        item.active && !item.disabled
-                          ? undefined
-                          : item.tipTopColor
-                      }
-                      text={item.tipTop}
-                    />
-                    <ClText
-                      text={item.day}
-                      textColor={
-                        !item.active && !item.disabled && item.highlight
-                          ? highlightWeekendColor
-                          : undefined
-                      }
-                    />
-                    <ClText
-                      size={12}
-                      align={"center"}
-                      cut={true}
-                      style={{ maxWidth: pxTransform(50) }}
-                      textColor={
-                        item.active && !item.disabled
-                          ? undefined
-                          : item.tipBottomColor
-                      }
-                      text={item.tipBottom}
-                    />
-                  </ClFlex>
-                </View>
-              </ClFlex>
-            </ClLayout>
-          </View>
-        ))}
-      </ClGrid>
-    </SwiperItem>
-  ));
 
-  const monthsComponent = [preMonth, thisMonth, nextMonth].map(
-    (month, index) => (
-      <SwiperItem key={month[3].date}>
+  let weeksComponent: any = undefined;
+  if (preWeek.length != 0 && thisWeek.length != 0 && nextWeek.length != 0) {
+    weeksComponent = [preWeek, thisWeek, nextWeek].map((week, index) => (
+      <SwiperItem key={week[3].date}>
         <ClGrid col={7}>
-          {month.map(item => (
+          {week.map(item => (
             <View
               key={item.timeStamp}
               onClick={clickDate.bind(this, {
@@ -612,10 +529,104 @@ export default function Calendar_weapp(props: IProps) {
           ))}
         </ClGrid>
       </SwiperItem>
-    )
-  );
+    ));
+  }
 
-  const months = Array.from(Array(12)).map((item, index) => `${index + 1}月`);
+
+  let monthsComponent: any = undefined;
+  if (preMonth.length != 0 && thisMonth.length != 0 && nextMonth.length != 0) {
+    monthsComponent = [preMonth, thisMonth, nextMonth].map(
+      (month, index) => (
+        <SwiperItem key={month[3].date}>
+          <ClGrid col={7}>
+            {month.map(item => (
+              <View
+                key={item.timeStamp}
+                onClick={clickDate.bind(this, {
+                  item,
+                  type: mapChangeWeekIndex[index]
+                })}
+              >
+                <ClLayout padding={"small"} paddingDirection={"vertical"}>
+                  <ClFlex align={"center"} justify={"center"}>
+                    <View
+                      style={{
+                        position: "relative"
+                      }}
+                      className={classNames([
+                        "day-normal",
+                        `${item.disabled ? BG_COLOR_LIST["gray"] : ""}`,
+                        `${
+                          item.special.show && !item.active
+                            ? BG_COLOR_LIST[item.special.color]
+                            : ""
+                        }`,
+                        {
+                          [BGClassName]: !item.disabled && item.active,
+                          [oldTextClassName]: item.old
+                        }
+                      ])}
+                    >
+                      <View
+                        className={classNames([
+                          {
+                            ["cu-tag badge"]: item.badge.show
+                          },
+                          BG_COLOR_LIST[item.badge.color]
+                        ])}
+                      >
+                        {item.badge.num}
+                      </View>
+                      <ClFlex
+                        align={"center"}
+                        justify={"center"}
+                        direction={"column"}
+                      >
+                        <ClText
+                          size={12}
+                          align={"center"}
+                          cut={true}
+                          style={{ maxWidth: pxTransform(50) }}
+                          textColor={
+                            item.active && !item.disabled
+                              ? undefined
+                              : item.tipTopColor
+                          }
+                          text={item.tipTop}
+                        />
+                        <ClText
+                          text={item.day}
+                          textColor={
+                            !item.active && !item.disabled && item.highlight
+                              ? highlightWeekendColor
+                              : undefined
+                          }
+                        />
+                        <ClText
+                          size={12}
+                          align={"center"}
+                          cut={true}
+                          style={{ maxWidth: pxTransform(50) }}
+                          textColor={
+                            item.active && !item.disabled
+                              ? undefined
+                              : item.tipBottomColor
+                          }
+                          text={item.tipBottom}
+                        />
+                      </ClFlex>
+                    </View>
+                  </ClFlex>
+                </ClLayout>
+              </View>
+            ))}
+          </ClGrid>
+        </SwiperItem>
+      )
+    );
+  }
+
+  const months = Array.from(Array(12)).map((_, index) => `${index + 1}月`);
 
   return (
     <ClCard type={showType}>
@@ -706,6 +717,4 @@ export default function Calendar_weapp(props: IProps) {
   );
 }
 
-Calendar_weapp.options = {
-  addGlobalClass: true
-};
+export default Calendar_weapp

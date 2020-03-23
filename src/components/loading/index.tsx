@@ -1,11 +1,13 @@
-import { Image, Text, View } from "@tarojs/components";
-import Taro, { useEffect, useState, pxTransform } from "@tarojs/taro";
-import { BG_COLOR_LIST } from "../../lib/model";
+// @ts-ignore
+import React, { FunctionComponent, useEffect, useState } from "react";
+import { Image, Text, View, Block } from "@tarojs/components";
+import Taro, { pxTransform } from "@tarojs/taro";
+import { BG_COLOR_LIST } from "@/lib/model";
 import { IProps } from "../../../@types/loading";
-import { classNames } from "../../lib";
+import { classNames } from "@/lib";
 import ClText from "../../components/text";
 
-export default function ClLoading(props: IProps) {
+const ClLoading: FunctionComponent<IProps> = (props) => {
   const [loadProgress, setLoadProgress] = useState(0);
   const loadProgressFn = () => {
     setLoadProgress(100);
@@ -35,7 +37,7 @@ export default function ClLoading(props: IProps) {
 
   const commonComponent = (
     <View style={Object.assign(contentViewStyle)}>
-      {this.props.children}
+      {props.children}
       <View
         className="cu-load load-image"
         style={Object.assign(contentLoadingStyle)}
@@ -91,7 +93,7 @@ export default function ClLoading(props: IProps) {
           }}
         />
       </View>
-      {this.props.children}
+      {props.children}
     </View>
   );
   const lineComponent = (
@@ -119,7 +121,7 @@ export default function ClLoading(props: IProps) {
         />
         <View className={`load-progress-spinner text-${props.bgColor}`} />
       </View>
-      {this.props.children}
+      {props.children}
     </View>
   );
 
@@ -136,13 +138,9 @@ export default function ClLoading(props: IProps) {
       commonComponent
     )
   ) : (
-    <View />
+    <Block />
   );
 }
-
-ClLoading.options = {
-  addGlobalClass: true
-};
 
 ClLoading.defaultProps = {
   type: "bar",
@@ -152,3 +150,5 @@ ClLoading.defaultProps = {
   noMore: false,
   show: false
 } as IProps;
+
+export default ClLoading

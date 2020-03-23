@@ -1,7 +1,7 @@
 @import "../vars";
 
 .bg {
-  &-red {
+  &-red, &-red[type='default'] {
     background-color: $red;
     color: $white;
     &.light {
@@ -9,7 +9,7 @@
       background-color: $redLight;
     }
   }
-  &-orange {
+  &-orange, &-orange[type='default'] {
     background-color: $orange;
     color: $white;
     &.light {
@@ -17,7 +17,7 @@
       background-color: $orangeLight;
     }
   }
-  &-yellow {
+  &-yellow, &-yellow[type='default'] {
     background-color: $yellow;
     color: $black;
     &.light {
@@ -25,7 +25,7 @@
       background-color: $yellowLight;
     }
   }
-  &-olive {
+  &-olive, &-olive[type='default'] {
     background-color: $olive;
     color: $white;
     &.light {
@@ -33,7 +33,7 @@
       background-color: $oliveLight;
     }
   }
-  &-green {
+  &-green, &-green[type='default'] {
     background-color: $green;
     color: $white;
     &.light {
@@ -41,7 +41,7 @@
       background-color: $greenLight;
     }
   }
-  &-cyan {
+  &-cyan, &-cyan[type='default'] {
     background-color: $cyan;
     color: $white;
     &.light {
@@ -49,7 +49,7 @@
       background-color: $cyanLight;
     }
   }
-  &-blue {
+  &-blue, &-blue[type='default'] {
     background-color: $blue;
     color: $white;
     &.light {
@@ -57,7 +57,7 @@
       background-color: $blueLight;
     }
   }
-  &-purple {
+  &-purple, &-purple[type='default'] {
     background-color: $purple;
     color: $white;
     &.light {
@@ -65,7 +65,7 @@
       background-color: $purpleLight;
     }
   }
-  &-mauve {
+  &-mauve, &-mauve[type='default'] {
     background-color: $mauve;
     color: $white;
     &.light {
@@ -73,7 +73,7 @@
       background-color: $mauveLight;
     }
   }
-  &-pink {
+  &-pink, &-pink[type='default'] {
     background-color: $pink;
     color: $white;
 
@@ -82,7 +82,7 @@
       background-color: $pinkLight;
     }
   }
-  &-brown {
+  &-brown, &-brown[type='default'] {
     background-color: $brown;
     color: $white;
     &.light {
@@ -90,7 +90,7 @@
       background-color: $brownLight;
     }
   }
-  &-grey {
+  &-grey, &-grey[type='default'] {
     background-color: $grey;
     color: $white;
     &.light {
@@ -98,7 +98,7 @@
       background-color: $greyLight;
     }
   }
-  &-gray {
+  &-gray, &-gray[type='default'] {
     background-color: #f0f0f0;
     color: $black;
     &.light {
@@ -110,44 +110,44 @@
       background-color: #f1f1f1;
     }
   }
-  &-black {
+  &-black, &-black[type='default'] {
     background-color: $black;
     color: $white;
   }
-  &-white {
+  &-white, &-white[type='default'] {
     background-color: $white;
     color: $darkGray;
   }
-  &-shadeTop {
+  &-shadeTop, &-shadeTop[type='default'] {
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.01));
     color: $white;
   }
-  &-shadeBottom {
+  &-shadeBottom, &-shadeBottom[type='default'] {
     background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 1));
     color: $white;
   }
   &-gradual {
-    &-red {
+    &-red, &-red[type='default'] {
       background-image: $gradualRed;
       color: $white;
     }
-    &-orange {
+    &-orange, &-orange[type='default'] {
       background-image: $gradualOrange;
       color: $white;
     }
-    &-green {
+    &-green, &-green[type='default'] {
       background-image: $gradualGreen;
       color: $white;
     }
-    &-purple {
+    &-purple, &-purple[type='default'] {
       background-image: $gradualPurple;
       color: $white;
     }
-    &-pink {
+    &-pink, &-pink[type='default'] {
       background-image: $gradualPink;
       color: $white;
     }
-    &-blue {
+    &-blue, &-blue[type='default'] {
       background-image: $gradualBlue;
       color: $white;
     }

@@ -1,18 +1,16 @@
+import React from "react";
 import { View, Text } from "@tarojs/components";
-import Taro, { pxTransform, Component } from "@tarojs/taro";
+import Taro, { pxTransform } from "@tarojs/taro";
 import { IProps } from "../../../../@types/checkbox";
-import { classNames } from "../../../lib";
+import { classNames } from "@/lib";
 
 interface IState {
   list: any[];
 }
 
-class ClCheckboxH5 extends Component<IProps, IState> {
-  static options = {
-    addGlobalClass: true
-  };
+class ClCheckboxH5 extends React.Component<IProps, IState> {
 
-  static defaultProps: IProps = {
+  static defaultProps = {
     color: "green",
     type: "normal",
     shape: "normal",
@@ -21,17 +19,15 @@ class ClCheckboxH5 extends Component<IProps, IState> {
     title: ""
   };
 
-  constructor() {
-    super(...arguments);
+  constructor(props) {
+    super(props);
     this.state = {
       list: []
     } as IState;
   }
 
   componentDidUpdate(
-    prevProps: Readonly<IProps>,
-    prevState: Readonly<IState>,
-    snapshot?: any
+    prevProps: Readonly<IProps>
   ): void {
     if (prevProps.checkboxGroup !== this.props.checkboxGroup) {
       const currentCheckBox = this.props.checkboxGroup || [];
